@@ -1,0 +1,143 @@
+@import "helper";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #181818;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  color: #11181C;
+  letter-spacing: -0.5px;
+}
+
+a {
+  text-decoration: none;
+}
+//
+//@media (max-width: 1024px) {
+//  html {
+//    font-size: 15px;
+//  }
+//}
+//
+//@media (max-width: 992px) {
+//  html {
+//    font-size: 14px;
+//  }
+//}
+//
+//@media (max-width: 576px) {
+//  html {
+//    font-size: 13px;
+//  }
+//}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.container{
+  width: 100%;
+  max-width: 1208px !important;
+  margin: 0 auto;
+  @media (max-width: 1570px) {
+    padding: 0 15px;
+  }
+}
+
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+}
+
+// COMPONENTS
+
+.default-switch{
+
+  input{
+    display: none;
+  }
+
+  input:checked ~ span{
+    background-color: #FF592C;
+    &:after{
+      left: 12px;
+    }
+  }
+
+  span{
+    width: 26px;
+    min-width: 26px;
+    height: 16px;
+    background-color: #C1C8CD;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #FFF;
+      transition: 0.3s;
+    }
+
+  }
+
+}
+
+.border-tel-input{
+  border-color: #484747 !important;
+}
+
+.shadow-free-item{
+  box-shadow: 0 2px 4px 0 rgba(17, 80, 203, 0.10), 0px 24px 60px 0px rgba(17, 80, 203, 0.05), 0px 12px 24px 0px rgba(17, 80, 203, 0.05);
+}
+
+.lounges-title{
+  background: linear-gradient(90deg, #FFF 50.12%, rgba(255, 255, 255, 0.00) 99.99%);
+}
+
+.content{
+  box-shadow: 0px -20px 30px 0px #F0F2FF;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

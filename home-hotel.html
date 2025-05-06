@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--  FONTS -->
+  <link rel="stylesheet" href="fonts/style.css">
+  <!--  FONTS -->
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <script src="js/aos.js"></script>
+  <title>Kettik Hotel</title>
+</head>
+<body>
+
+<nav class="w-full h-[82px] bg-[#0E00D6] flex-jc-c">
+  <div class="container flex-jsb-c">
+    <a href="/">
+      <img src="images/home/logo.svg" alt="Logo">
+    </a>
+    <div class="flex-jc-e gap-2">
+      <div class="flex-jc-c flex-col">
+        <img src="images/icons/green-check.svg" alt="check icon">
+        <span class="text-white tracking-[-0.18px]">Результаты поиска</span>
+      </div>
+      <div class="w-[16px] min-w-[16px] h-[1px] bg-white mb-3"></div>
+      <div class="flex-jc-c flex-col">
+        <div class="w-[24px] h-[24px] flex-jc-c bg-[#00D9FF] rounded-full text-blue-800">
+          2
+        </div>
+        <span class="text-white tracking-[-0.18px]">Бронирование</span>
+      </div>
+      <div class="w-[16px] min-w-[16px] h-[1px] bg-white mb-3"></div>
+      <div class="flex-jc-c flex-col">
+        <div class="w-[24px] h-[24px] flex-jc-c bg-transparent rounded-full text-white border border-white">
+          3
+        </div>
+        <span class="text-white tracking-[-0.18px]">Итоги и оплата</span>
+      </div>
+    </div>
+
+
+    <div class="flex-je-c gap-4">
+      <button class="text-white flex-jc-c gap-2">
+        Авиабилеты
+        <i class="icon icon-arrow_drop_down text-white"></i>
+      </button>
+      <button class="text-white flex-jc-c gap-2">
+        RU
+        <i class="icon icon-arrow_drop_down text-white"></i>
+      </button>
+      <div class="min-w-[1px] h-[16px] bg-[#FFF0E0]"></div>
+      <button class="text-white flex-jc-c gap-2">
+        UZS
+        <i class="icon icon-arrow_drop_down text-white"></i>
+      </button>
+      <button class="text-white flex-jc-c gap-2 border border-[#FFF0E0] rounded-full px-[18px] py-[8px]">
+        Войти в аккаунт
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="container pt-[48px] mb-16">
+    <h1 class="text-center text-[48px] raleway-font font-semibold text-[#0E00D6] mb-8">Начни своё путешествие сейчас!</h1>
+
+    <div class="flex-js-s gap-11">
+      <div class="flex-jc-c flex-col cursor-pointer">
+        <img src="images/icons/airplane-front-view.svg" alt="icon avi">
+        <span class="text-[15px] mt-2 text-[#3E3AFF]">Авиабилеты</span>
+      </div>
+      <div class="flex-jc-c flex-col cursor-pointer">
+        <img src="images/icons/bell.svg" alt="icon avi">
+        <span class="text-[15px] mt-2 ">Отели</span>
+      </div>
+    </div>
+
+    <div class="w-full h-16 bg-[#E1F9FE] mt-8 rounded-[8px] ps-4 flex-jsb-c gap-4">
+     <div class="flex-js-c gap-4">
+       <label class="flex-js-c gap-2">
+         <img src="images/icons/prefix.svg" alt="images">
+         <input type="text" placeholder="Введите направление" class="bg-transparent placeholder:text-[#71717A]">
+       </label>
+       <div class="w-[1px] min-w-[1px] h-[24px] bg-[#00D9FF]"></div>
+       <div class="flex-jc-c gap-4">
+         <label class="flex-js-c gap-2">
+           <input type="text" placeholder="Дата заезда" class="bg-transparent placeholder:text-[#71717A] w-[100px]">
+           <img src="images/icons/suffix.svg" alt="images">
+         </label>
+         <div class="w-[1px] min-w-[1px] h-4 bg-[#00D9FF]"></div>
+         <label class="flex-js-c gap-2">
+           <input type="text" placeholder="Дата заезда" class="bg-transparent placeholder:text-[#71717A] w-[100px]">
+         </label>
+       </div>
+       <div class="w-[1px] min-w-[1px] h-[24px] bg-[#00D9FF]"></div>
+       <div class="flex-js-c gap-2">
+         <img src="images/icons/user.svg" alt="images">
+         <div class="flex-js-c cursor-pointer text-nowrap">
+           <span class="text-[#27272A]">1 номер </span>
+           <span class="w-[2px] h-[2px] min-w-[2px] rounded-full bg-[#71717A] mx-1 block"></span>
+           <span class="text-[#27272A]">2 взрослых</span>
+           <span class="w-[2px] h-[2px] min-w-[2px] rounded-full bg-[#71717A] mx-1 block"></span>
+           <span class="text-[#27272A]">Без детей</span>
+         </div>
+       </div>
+     </div>
+      <button class="w-[220px] h-full text-[18px] bg-[#3E3AFF] rounded-[0_8px_8px_0] text-white">
+        Найти
+      </button>
+    </div>
+
+    <div class="mt-6">
+      <label class="flex-js-c gap-4">
+        <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+          <input type="checkbox" class="hidden peer">
+          <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+        </span>
+        Я гражданин Узбекистана
+      </label>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="content rounded-[32px_32px_0_0] pt-8">
+  <div class="container mb-16">
+    <div class="flex-js-s gap-3">
+      <span class="px-[14px] py-2 bg-[#F0F2FF] text-[14px] text-[#27272A] rounded-full transition hover:bg-[#E4E7FF] cursor-default">Популярные города</span>
+      <span class="px-[14px] py-2 bg-[#F0F2FF] text-[14px] text-[#27272A] rounded-full transition hover:bg-[#E4E7FF] cursor-default">Отели в Узбекистане</span>
+      <span class="px-[14px] py-2 bg-[#F0F2FF] text-[14px] text-[#27272A] rounded-full transition hover:bg-[#E4E7FF] cursor-default">Зоны отдыха в Узбекистане</span>
+      <span class="px-[14px] py-2 bg-[#F0F2FF] text-[14px] text-[#27272A] rounded-full transition hover:bg-[#E4E7FF] cursor-default">Дачи в Узбекистане</span>
+      <span class="px-[14px] py-2 bg-[#F0F2FF] text-[14px] text-[#27272A] rounded-full transition hover:bg-[#E4E7FF] cursor-default">Помощь</span>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
