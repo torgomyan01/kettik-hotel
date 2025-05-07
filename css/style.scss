@@ -137,6 +137,17 @@ input:focus {
   box-shadow: 0px -20px 30px 0px #F0F2FF;
 }
 
+.card-shadow{
+  box-shadow: 0 0 0.5px 0 rgba(18, 1, 255, 0.20), 0px 0.5px 2px 0px #CDD3FF;
+}
+.faq-item-shadow{
+  box-shadow: 0px 2px 4px 0px rgba(62, 123, 250, 0.04), 0px 8px 16px 0px rgba(102, 223, 246, 0.16);
+}
+
+.contact-section{
+  background: linear-gradient(147deg, rgba(0, 217, 255, 0.30) -19.7%, rgba(117, 180, 255, 0.30) 53.65%);
+}
+
 
 @tailwind base;
 @tailwind components;
