@@ -2252,6 +2252,10 @@ video {
     height: 105px;
   }
 
+  .md\:h-\[82px\]{
+    height: 82px;
+  }
+
   .md\:w-\[105px\]{
     width: 105px;
   }

@@ -16,10 +16,11 @@
 </head>
 <body>
 
-<nav class="w-full h-[82px] bg-[#0E00D6] flex-jc-c">
+<nav class="w-full h-[56px] md:h-[82px] bg-[#0E00D6] flex-jc-c">
   <div class="container flex-jsb-c">
     <a href="/">
-      <img src="images/home/logo.svg" alt="Logo">
+      <img src="images/home/logo.svg" alt="Logo" class="hidden md:block">
+      <img src="images/home/logo-mobile.svg" alt="Logo" class="block md:hidden">
     </a>
     <div class="flex-jc-e gap-2 hidden min-[846px]:flex">
       <div class="flex-jc-c flex-col">
@@ -341,7 +342,7 @@
       </div>
     </div>
 
-    <div class="w-fill grid grid-cols-3 gap-4">
+    <div class="w-fill grid-cols-3 gap-4 grid md:hidden">
       <div>
         <img src="images/home/price-mobile.jpg" alt="price-mobile" width="146" height="225" class="w-full h-auto rounded-[12px] object-cover">
         <h2 class="text-[14px] sm:text-[16px] tracking-[-0.18px] mt-2 leading-[116%]">Лучшие цены в Узбекистане</h2>
