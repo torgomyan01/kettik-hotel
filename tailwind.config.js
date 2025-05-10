@@ -44,6 +44,11 @@ const flexClasses = {
     justifyContent: 'center',
     alignItems: 'end',
   },
+  '.flex-je-e': {
+    display: 'flex',
+    justifyContent: 'end',
+    alignItems: 'end',
+  },
   '.flex-jse-c': {
     display: 'flex',
     justifyContent: 'space-evenly',

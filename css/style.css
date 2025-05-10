@@ -354,6 +354,28 @@ input:focus {
   }
 }
 
+.noUi-horizontal {
+  height: 2px !important;
+  border: none !important;
+}
+
+.noUi-connect {
+  background: #3E3AFF !important;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  top: -7px !important;
+  right: -13px !important;
+  border: 2px solid #3E3AFF !important;
+  background: #fff !important;
+}
+.noUi-horizontal .noUi-handle:before, .noUi-horizontal .noUi-handle:after {
+  display: none !important;
+}
+
 .border-tel-input {
   border-color: #484747 !important;
 }
@@ -388,8 +410,16 @@ input:focus {
   box-shadow: -0.5px 0px 0px 0px #00D9FF inset, 0px -0.5px 0px 0px #00BEE5 inset, 0.5px 0px 0px 0px #00D9FF inset, 0px -1px 0px 0px #00D9FF inset, 0px 0.5px 0px 0px #00D9FF inset;
 }
 
+.wrapper-shadow {
+  box-shadow: 0px 0px 0.5px 0px rgba(18, 1, 255, 0.2), 0px 0.5px 2px 0px #CDD3FF;
+}
+
 .contact-section {
   background: linear-gradient(147deg, rgba(0, 217, 255, 0.3) -19.7%, rgba(117, 180, 255, 0.3) 53.65%);
+}
+
+.view-map-btn-shadow {
+  box-shadow: 0px 10px 20px 2px rgba(39, 39, 42, 0.1), 0px -1px 0px 0px rgba(18, 1, 255, 0.2), -1px 0px 0px 0px rgba(18, 1, 255, 0.2), 1px 0px 0px 0px rgba(18, 1, 255, 0.2), 0px 1px 0px 0px rgba(18, 1, 255, 0.2);
 }
 
 .scroll-bottom-none::-webkit-scrollbar {
@@ -444,6 +474,92 @@ input:focus {
   top: 0;
 }
 
+#load-line1 {
+  stroke: #3E3AFF;
+}
+
+#load-line2 {
+  stroke: #2196f3;
+}
+
+#load-line3 {
+  stroke: #e91e63;
+}
+
+#load-line4 {
+  stroke: #9c27b0;
+}
+
+.circle-wrapper .svg:nth-of-type(1) {
+  color: #3E3AFF;
+}
+.circle-wrapper .svg:nth-of-type(2) {
+  color: #2196f3;
+}
+.circle-wrapper .svg:nth-of-type(3) {
+  color: #e91e63;
+}
+.circle-wrapper .svg:nth-of-type(4) {
+  color: #9c27b0;
+}
+.circle-wrapper .svg {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
+  position: relative;
+}
+.circle-wrapper .svg:after {
+  content: attr(data-lang);
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #fff;
+}
+.circle-wrapper svg path {
+  fill: none;
+}
+.circle-wrapper svg .load-circle {
+  stroke-width: 3px;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 3s ease-in-out;
+  position: relative;
+}
+.circle-wrapper .load-bg {
+  stroke: #E4E7FF;
+  stroke-width: 3px;
+}
+
+@keyframes load {
+  to {
+    stroke-dashoffset: 48;
+  }
+}
+.social {
+  color: #999;
+  letter-spacing: 1px;
+}
+.social i {
+  background: #eee;
+  color: #777;
+  padding: 5px;
+  border-radius: 50%;
+}
+.social i:hover {
+  color: #111;
+}
+.social .follow {
+  animation: light 0.8s ease-in-out infinite forwards;
+}
+
+@keyframes light {
+  to {
+    color: #111;
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

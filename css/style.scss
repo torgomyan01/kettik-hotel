@@ -123,6 +123,7 @@ input:focus {
 
 
 @import "components/search";
+@import "components/input-range";
 
 .border-tel-input{
   border-color: #484747 !important;
@@ -154,9 +155,16 @@ input:focus {
 .btn-child-shadow{
   box-shadow: -0.5px 0px 0px 0px #00D9FF inset, 0px -0.5px 0px 0px #00BEE5 inset, 0.5px 0px 0px 0px #00D9FF inset, 0px -1px 0px 0px #00D9FF inset, 0px 0.5px 0px 0px #00D9FF inset;
 }
+.wrapper-shadow{
+  box-shadow: 0px 0px 0.5px 0px rgba(18, 1, 255, 0.20), 0px 0.5px 2px 0px #CDD3FF;
+}
 
 .contact-section{
   background: linear-gradient(147deg, rgba(0, 217, 255, 0.30) -19.7%, rgba(117, 180, 255, 0.30) 53.65%);
+}
+
+.view-map-btn-shadow{
+  box-shadow: 0px 10px 20px 2px rgba(39, 39, 42, 0.10), 0px -1px 0px 0px rgba(18, 1, 255, 0.20), -1px 0px 0px 0px rgba(18, 1, 255, 0.20), 1px 0px 0px 0px rgba(18, 1, 255, 0.20), 0px 1px 0px 0px rgba(18, 1, 255, 0.20);
 }
 
 .scroll-bottom-none{
@@ -214,6 +222,96 @@ input:focus {
     }
   }
 }
+
+
+
+$green: #3E3AFF;
+$colors: #3E3AFF #2196f3 #e91e63 #9c27b0;
+$svgValue: 75; // write wanted value
+$totalLength: 192; //total length from javascript
+$offsetvalue:$totalLength - (($svgValue/100) *$totalLength);
+$speed: 5s;
+
+  $map: (#load-line1: #3E3AFF, #load-line2: #2196f3, #load-line3: #e91e63, #load-line4: #9c27b0);
+  @each $key,
+  $value in $map {
+    #{$key} {
+      stroke: $value
+    }
+  }
+  .circle-wrapper {
+    @each $id,
+    $color in (1, #3E3AFF),
+            (2, #2196f3),
+            (3, #e91e63),
+            (4, #9c27b0) {
+      .svg:nth-of-type(#{$id}) {
+        color: $color
+      }
+    }
+    .svg {
+      border-radius: 5px;
+      padding: 5px;
+      margin: 10px 0;
+      position: relative;
+      &:after {
+        content: attr(data-lang);
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 1px #fff
+      }
+    }
+    svg {
+
+      path {
+        fill: none;
+      }
+      .load-circle {
+        stroke-width: 3px;
+        stroke-linecap: round;
+        transition: stroke-dashoffset 3s ease-in-out;
+        position: relative;
+      }
+    }
+    .load-bg {
+      stroke: #E4E7FF;
+      stroke-width: 3px
+    }
+  }
+
+  @keyframes load {
+    to {
+      stroke-dashoffset: $offsetvalue;
+    }
+  }
+
+.social {
+  color: #999;
+  letter-spacing: 1px;
+  i{
+    background: #eee;
+    color: #777;
+    padding: 5px;
+    border-radius: 50%;
+
+  }
+  i:hover {
+    color: #111;
+  }
+  .follow {
+    animation: light .8s ease-in-out infinite forwards
+  }
+}
+
+@keyframes light {
+  to{color: #111}
+}
+
 
 
 
