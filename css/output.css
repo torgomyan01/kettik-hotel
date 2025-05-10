@@ -1736,8 +1736,20 @@ video {
   min-width: 2px;
 }
 
+.min-w-full{
+  min-width: 100%;
+}
+
+.min-w-\[286px\]{
+  min-width: 286px;
+}
+
 .max-w-\[302px\]{
   max-width: 302px;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .flex-grow{
@@ -2663,6 +2675,10 @@ video {
 
   .lg\:gap-\[80px\]{
     gap: 80px;
+  }
+
+  .lg\:gap-\[100px\]{
+    gap: 100px;
   }
 
   .lg\:text-\[48px\]{
