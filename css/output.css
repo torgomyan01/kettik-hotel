@@ -1428,6 +1428,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -1472,6 +1476,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-40{
+  margin-top: 10rem;
+}
+
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -1492,16 +1500,12 @@ video {
   margin-top: -50px;
 }
 
+.mt-\[100px\]{
+  margin-top: 100px;
+}
+
 .mt-\[48px\]{
   margin-top: 48px;
-}
-
-.mb-\[100px\]{
-  margin-bottom: 100px;
-}
-
-.mt-40{
-  margin-top: 10rem;
 }
 
 .block{
@@ -1668,10 +1672,6 @@ video {
   width: 1px;
 }
 
-.w-\[240px\]{
-  width: 240px;
-}
-
 .w-\[248px\]{
   width: 248px;
 }
@@ -1682,6 +1682,10 @@ video {
 
 .w-\[24px\]{
   width: 24px;
+}
+
+.w-\[284px\]{
+  width: 284px;
 }
 
 .w-\[2px\]{
@@ -1704,16 +1708,16 @@ video {
   width: 100%;
 }
 
-.w-\[284px\]{
-  width: 284px;
-}
-
 .min-w-6{
   min-width: 1.5rem;
 }
 
 .min-w-\[1200px\]{
   min-width: 1200px;
+}
+
+.min-w-\[140px\]{
+  min-width: 140px;
 }
 
 .min-w-\[16px\]{
@@ -1724,32 +1728,20 @@ video {
   min-width: 1px;
 }
 
-.min-w-\[240px\]{
-  min-width: 240px;
-}
-
 .min-w-\[248px\]{
   min-width: 248px;
-}
-
-.min-w-\[2px\]{
-  min-width: 2px;
-}
-
-.min-w-full{
-  min-width: 100%;
 }
 
 .min-w-\[286px\]{
   min-width: 286px;
 }
 
-.max-w-\[302px\]{
-  max-width: 302px;
+.min-w-\[2px\]{
+  min-width: 2px;
 }
 
-.max-w-full{
-  max-width: 100%;
+.max-w-\[302px\]{
+  max-width: 302px;
 }
 
 .flex-grow{
@@ -1967,6 +1959,11 @@ video {
   border-color: #D4D4D880;
 }
 
+.border-\[\#DD2818\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(221 40 24 / var(--tw-border-opacity, 1));
+}
+
 .border-\[\#FFF0E0\]{
   --tw-border-opacity: 1;
   border-color: rgb(255 240 224 / var(--tw-border-opacity, 1));
@@ -1979,11 +1976,6 @@ video {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.border-\[\#DD2818\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(221 40 24 / var(--tw-border-opacity, 1));
 }
 
 .border-t-transparent{
@@ -2136,10 +2128,6 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.pb-\[100px\]{
-  padding-bottom: 100px;
-}
-
 .pb-\[1px\]{
   padding-bottom: 1px;
 }
@@ -2168,6 +2156,10 @@ video {
   padding-top: 0.25rem;
 }
 
+.pt-10{
+  padding-top: 2.5rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
@@ -2182,10 +2174,6 @@ video {
 
 .pt-\[48px\]{
   padding-top: 48px;
-}
-
-.pt-10{
-  padding-top: 2.5rem;
 }
 
 .text-center{
@@ -2230,6 +2218,10 @@ video {
 
 .text-\[25px\]{
   font-size: 25px;
+}
+
+.text-\[30px\]{
+  font-size: 30px;
 }
 
 .text-\[35px\]{
@@ -2288,6 +2280,11 @@ video {
   letter-spacing: 0.01px;
 }
 
+.text-\[\#010078\]{
+  --tw-text-opacity: 1;
+  color: rgb(1 0 120 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#0D607D\]{
   --tw-text-opacity: 1;
   color: rgb(13 96 125 / var(--tw-text-opacity, 1));
@@ -2338,6 +2335,11 @@ video {
   color: rgb(255 240 224 / var(--tw-text-opacity, 1));
 }
 
+.text-\[red\]{
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity, 1));
+}
+
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(17 24 28 / var(--tw-text-opacity, 1));
@@ -2350,11 +2352,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#010078\]{
-  --tw-text-opacity: 1;
-  color: rgb(1 0 120 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0{
@@ -2419,14 +2416,14 @@ video {
   color: rgb(113 113 122 / var(--tw-text-opacity, 1));
 }
 
-.hover\:border-\[\#3E3AFF\]:hover{
-  --tw-border-opacity: 1;
-  border-color: rgb(62 58 255 / var(--tw-border-opacity, 1));
-}
-
 .hover\:border-\[\#010078\]:hover{
   --tw-border-opacity: 1;
   border-color: rgb(1 0 120 / var(--tw-border-opacity, 1));
+}
+
+.hover\:border-\[\#3E3AFF\]:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(62 58 255 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-\[\#00D9F3\]:hover{
@@ -2669,20 +2666,22 @@ video {
     gap: 1rem;
   }
 
-  .lg\:gap-\[130px\]{
-    gap: 130px;
-  }
-
   .lg\:gap-\[80px\]{
     gap: 80px;
   }
 
-  .lg\:gap-\[100px\]{
-    gap: 100px;
-  }
-
   .lg\:text-\[48px\]{
     font-size: 48px;
+  }
+}
+
+@media (min-width: 1100px){
+  .min-\[1100px\]\:w-\[240px\]{
+    width: 240px;
+  }
+
+  .min-\[1100px\]\:min-w-\[240px\]{
+    min-width: 240px;
   }
 }
 

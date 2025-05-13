@@ -28,6 +28,7 @@ function HeroOneInputFocus() {
   const thisParent = this.parentElement;
 
   thisParent?.classList.toggle('focus')
+  thisParent?.parentElement?.classList.toggle('focus')
   heroOneLine?.classList.toggle('opacity-0')
   heroInputRes?.classList.toggle('hidden')
 }

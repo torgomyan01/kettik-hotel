@@ -81,17 +81,43 @@
     <div class="container mb-16">
 
       <div class="w-full flex-js-s gap-6">
-        <div class="w-full max-w-[302px] border wrapper-shadow rounded-[12px]">
+        <div class="w-full max-w-[302px] border wrapper-shadow rounded-[12px] hidden lg:block">
 
           <div class="p-4 border-b">
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Направление</h3>
-            <label class="w-full h-12 bg-[#E1F9FE] rounded-[12px] flex-jsb-c px-4 mb-4">
-            <span class="flex-js-c gap-2">
-              <img src="images/icons/prefix.svg" alt="images">
-              <input type="text" placeholder="Введите направление" class="bg-transparent placeholder:text-[#71717A]"
-                     id="hero-input-place">
-            </span>
+            <label class="w-full h-12 bg-[#E1F9FE] rounded-[12px] flex-jsb-c px-4 mb-4 transition border-[2px] [&.focus]:border-[#3E3AFF] border-transparent relative">
+              <span class="flex-js-c gap-2">
+                <img src="images/icons/prefix.svg" alt="images">
+                <input type="text" placeholder="Введите направление" class="bg-transparent placeholder:text-[#71717A]"
+                       id="hero-input-place">
+              </span>
               <i class="icon-close text-[18px] cursor-pointer text-[#71717A]"></i>
+
+              <div
+                  class="w-full absolute top-[calc(100%+4px)] left-0 bg-white hero-res-shadow z-10  rounded-[12px] p-1 hidden"
+                  id="hero-input-res">
+                <div
+                    class="w-full h-[52px] rounded-[8px] hover:bg-[#F0F2FF] flex-js-c gap-4 tracking-[-0.18px] px-5 transition cursor-pointer">
+                  <img src="images/icons/prefix.svg" alt="images">
+                  Такшкент
+                </div>
+                <div
+                    class="w-full h-[52px] rounded-[8px] hover:bg-[#F0F2FF] flex-js-c gap-4 tracking-[-0.18px] px-5 transition cursor-pointer">
+                  <img src="images/icons/prefix.svg" alt="images">
+                  Самарканд
+                </div>
+                <div
+                    class="w-full h-[52px] rounded-[8px] hover:bg-[#F0F2FF] flex-js-c gap-4 tracking-[-0.18px] px-5 transition cursor-pointer">
+                  <img src="images/icons/prefix.svg" alt="images">
+                  Бухара
+                </div>
+                <hr class="my-1">
+                <div
+                    class="w-full h-[52px] rounded-[8px] hover:bg-[#F0F2FF] flex-js-c gap-4 tracking-[-0.18px] px-5 transition cursor-pointer">
+                  <img src="images/icons/prefix.svg" alt="images">
+                  Бостанлыкский район
+                </div>
+              </div>
             </label>
 
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Даты</h3>
@@ -636,7 +662,7 @@
           <div class="mt-6">
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
@@ -682,7 +708,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-2.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
                 </div>
@@ -732,7 +758,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-3.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
                 </div>
@@ -777,7 +803,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-4.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
                 </div>
@@ -822,7 +848,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-5.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
                 </div>
@@ -867,7 +893,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-6.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.3</span>
                 </div>
@@ -914,7 +940,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
@@ -960,7 +986,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-2.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
                 </div>
@@ -1018,7 +1044,7 @@
 
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-3.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
                 </div>
@@ -1063,7 +1089,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-4.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
                 </div>
@@ -1108,7 +1134,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-5.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
                 </div>
@@ -1153,7 +1179,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-6.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.3</span>
                 </div>
@@ -1200,7 +1226,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
@@ -1246,7 +1272,7 @@
             </div>
             <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[240px] min-w-[240px] overflow-hidden rounded-[12px] relative">
+                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
                   <img src="images/search-result/hotel-2.png" alt="hotel-1" class="w-full h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
                 </div>
