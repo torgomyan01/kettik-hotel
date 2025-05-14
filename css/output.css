@@ -1748,6 +1748,14 @@ video {
   min-width: 2px;
 }
 
+.min-w-\[200px\]{
+  min-width: 200px;
+}
+
+.min-w-\[150px\]{
+  min-width: 150px;
+}
+
 .max-w-\[302px\]{
   max-width: 302px;
 }
@@ -2693,6 +2701,12 @@ video {
   }
 }
 
+@media (min-width: 874px){
+  .min-\[874px\]\:min-w-\[200px\]{
+    min-width: 200px;
+  }
+}
+
 @media (min-width: 1024px){
   .lg\:col-span-1{
     grid-column: span 1 / span 1;
@@ -2805,6 +2819,12 @@ video {
 
   .min-\[1113px\]\:ps-4{
     padding-inline-start: 1rem;
+  }
+}
+
+@media (min-width: 1131px){
+  .min-\[1131px\]\:min-w-\[286px\]{
+    min-width: 286px;
   }
 }
 
