@@ -1508,6 +1508,10 @@ video {
   margin-top: 48px;
 }
 
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
 .block{
   display: block;
 }
@@ -1626,6 +1630,10 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.h-2{
+  height: 0.5rem;
 }
 
 .min-h-6{
@@ -1911,6 +1919,14 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-\[\]{
+  border-radius: ;
+}
+
+.rounded-\[4px\]{
+  border-radius: 4px;
+}
+
 .border{
   border-width: 1px;
 }
@@ -1978,6 +1994,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
+.border-green-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity, 1));
+}
+
 .border-t-transparent{
   border-top-color: transparent;
 }
@@ -2042,6 +2063,11 @@ video {
 
 .bg-white\/30{
   background-color: rgb(255 255 255 / 0.3);
+}
+
+.bg-\[\#FE7C39\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 124 57 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover{
@@ -2112,6 +2138,16 @@ video {
   padding-bottom: 8px;
 }
 
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -2174,6 +2210,14 @@ video {
 
 .pt-\[48px\]{
   padding-top: 48px;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
 }
 
 .text-center{
@@ -2354,6 +2398,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#FFF0E0\]\/70{
+  color: rgb(255 240 224 / 0.7);
+}
+
 .opacity-0{
   opacity: 0;
 }
@@ -2395,6 +2443,14 @@ video {
     display: flex;
     justify-content: flex-start;
     align-items: start;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:flex-jsb-c{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -2646,6 +2702,10 @@ video {
     margin-top: 70px;
   }
 
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -2662,12 +2722,20 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
   .lg\:gap-4{
     gap: 1rem;
   }
 
   .lg\:gap-\[80px\]{
     gap: 80px;
+  }
+
+  .lg\:pb-0{
+    padding-bottom: 0px;
   }
 
   .lg\:text-\[48px\]{
