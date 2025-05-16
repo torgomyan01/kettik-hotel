@@ -413,6 +413,16 @@ input:focus {
 .wrapper-shadow {
   box-shadow: 0px 0px 0.5px 0px rgba(18, 1, 255, 0.2), 0px 0.5px 2px 0px #CDD3FF;
 }
+@media (max-width: 1024px) {
+  .wrapper-shadow.lg-none-shadow {
+    box-shadow: none;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-shadow.md-none-shadow {
+    box-shadow: none;
+  }
+}
 
 .contact-section {
   background: linear-gradient(147deg, rgba(0, 217, 255, 0.3) -19.7%, rgba(117, 180, 255, 0.3) 53.65%);

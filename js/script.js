@@ -16,6 +16,26 @@ const heroOneLine = $el('#hero-one-line');
 const heroTwoLine = $el('#hero-two-line');
 const heroInputRes = $el('#hero-input-res');
 
+const mobileCalendar = $el('#mobile-calendar');
+const closeCalendar = $el('#close-calendar');
+
+closeCalendar.addEventListener('click', function (){
+  mobileCalendar.classList.remove('active');
+})
+
+
+const mobileSort = $el('#mobile-sort');
+const closeSort = $el('#close-sort');
+const openSort = $el('#open-sort');
+
+closeSort.addEventListener('click', function (){
+  mobileSort.classList.remove('active');
+})
+
+openSort.addEventListener('click', function (){
+  mobileSort.classList.add('active');
+})
+
 
 heroInputPlace.addEventListener('focus', HeroOneInputFocus)
 
@@ -38,9 +58,6 @@ const heroInputData = $('.hero-input-data');
 const heroCalendar = $el('#hero-calendar');
 
 heroInputData.forEach(item => {
-  if (window.innerWidth < 1113) {
-    return;
-  }
   item.addEventListener('focus', HeroInputDataFocus)
 
   item.addEventListener('blur', HeroInputDataFocus)
@@ -49,6 +66,7 @@ heroInputData.forEach(item => {
 
 function HeroInputDataFocus() {
   if (window.innerWidth < 1113) {
+    mobileCalendar.classList.add('active');
     return;
   }
   const thisParent = this.parentElement.parentElement;

@@ -157,6 +157,19 @@ input:focus {
 }
 .wrapper-shadow{
   box-shadow: 0px 0px 0.5px 0px rgba(18, 1, 255, 0.20), 0px 0.5px 2px 0px #CDD3FF;
+
+  &.lg-none-shadow{
+    @media (max-width: 1024px) {
+      box-shadow: none;
+    }
+  }
+  &.md-none-shadow{
+    @media (max-width: 768px) {
+      box-shadow: none;
+    }
+  }
+
+
 }
 
 .contact-section{

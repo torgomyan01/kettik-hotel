@@ -80,11 +80,22 @@
   <div class="content rounded-[32px] pt-10 pb-[1px] sm:pb-6 bg-white relative z-1 !shadow-none">
     <div class="container mb-16">
 
-      <div class="w-full flex-js-s gap-6">
-        <div class="w-full max-w-[302px] border wrapper-shadow rounded-[12px] hidden lg:block">
+      <div class="w-full flex-js-s gap-6 flex-col lg:flex-row">
+        <div class="w-full lg:max-w-[302px] lg:border wrapper-shadow lg-none-shadow rounded-[12px]">
 
-          <div class="p-4 border-b">
-            <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Направление</h3>
+          <div class="flex-jc-c lg:hidden gap-11 mb-4">
+            <div class="flex-jc-c flex-col cursor-pointer">
+              <img src="images/icons/airplane-front-view.svg" alt="icon avi">
+              <span class="text-[15px] mt-2 text-[#3E3AFF]">Авиабилеты</span>
+            </div>
+            <div class="flex-jc-c flex-col cursor-pointer">
+              <img src="images/icons/bell.svg" alt="icon avi">
+              <span class="text-[15px] mt-2 ">Отели</span>
+            </div>
+          </div>
+
+          <div class="lg:p-4 lg:border-b">
+            <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px] hidden lg:block">Направление</h3>
             <label class="w-full h-12 bg-[#E1F9FE] rounded-[12px] flex-jsb-c px-4 mb-4 transition border-[2px] [&.focus]:border-[#3E3AFF] border-transparent relative">
               <span class="flex-js-c gap-2">
                 <img src="images/icons/prefix.svg" alt="images">
@@ -120,7 +131,7 @@
               </div>
             </label>
 
-            <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Даты</h3>
+            <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px] hidden lg:block">Даты</h3>
             <div
                 class="flex-jsb-c gap-4 px-4 mb-4 bg-[#E1F9FE]  border-[2px] [&.focus]:border-[#3E3AFF] border-transparent h-[48px] w-full transition relative rounded-[12px]">
               <label class="flex-js-c gap-2 relative top-[6px]">
@@ -248,7 +259,7 @@
             </div>
 
 
-            <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Гости</h3>
+            <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px] hidden lg:block">Гости</h3>
             <div
                 class="flex-js-c gap-2 pl-4 bg-[#E1F9FE] relative h-[48px] w-full border-[2px] [&.focus]:border-[#3E3AFF] border-transparent transition rounded-[12px]"
                 id="hero-input-select-child">
@@ -317,7 +328,7 @@
             </button>
           </div>
 
-          <div class="p-4 border-b">
+          <div class="p-4 border-b hidden lg:block">
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Ценовой диапозон</h3>
             <h4 class="tracking-[-0.18px]" id="price-min-max">25$ - 1000$+</h4>
             <div class="pe-2">
@@ -325,7 +336,7 @@
             </div>
           </div>
 
-          <div class="p-4 border-b">
+          <div class="p-4 border-b hidden lg:block">
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Количество звезд</h3>
             <div class="flex-js-s gap-3 flex-col">
               <label class="flex-js-c gap-4">
@@ -376,7 +387,7 @@
             </div>
           </div>
 
-          <div class="p-4 border-b">
+          <div class="p-4 border-b hidden lg:block">
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Расстояние от центра города</h3>
             <div class="flex-js-s gap-3 flex-col">
               <label class="flex-js-c gap-4">
@@ -409,7 +420,7 @@
             </div>
           </div>
 
-          <div class="p-4 border-b">
+          <div class="p-4 border-b hidden lg:block">
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Тип размещения</h3>
             <div class="flex-js-s gap-3 flex-col">
               <label class="flex-js-c gap-4">
@@ -433,7 +444,7 @@
             </div>
           </div>
 
-          <div class="p-4 border-b">
+          <div class="p-4 border-b hidden lg:block">
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Удобства отеля</h3>
             <div class="flex-js-s gap-3 flex-col">
               <label class="flex-js-c gap-4">
@@ -556,7 +567,7 @@
             </div>
           </div>
 
-          <div class="p-4 border-b">
+          <div class="p-4 border-b hidden lg:block">
             <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Оценка</h3>
             <div class="flex-js-s gap-3 flex-col">
               <label class="flex-js-c gap-4">
@@ -582,8 +593,23 @@
 
         </div>
 
+        <div class="flex-jsb-c lg:hidden px-4 border-t border-b border-[#E4E7FF] py-4 w-[calc(100%+32px)] ml-[-16px] ">
+          <div class="flex-js-c gap-2" id="open-sort">
+            <img src="images/icons/lucide-Icon.svg" alt="icon">
+            <span class="text-[14px] tracking-[-0.09px]">Сортировка</span>
+          </div>
+          <div class="flex-js-c gap-2">
+            <img src="images/icons/filter.svg" alt="icon">
+            <span class="text-[14px] tracking-[-0.09px]">Фильтры</span>
+          </div>
+          <div class="flex-js-c gap-2">
+            <img src="images/icons/map-max.svg" alt="icon">
+            <span class="text-[14px] tracking-[-0.09px]">Карта</span>
+          </div>
+        </div>
+
         <div class="w-full">
-          <div class="w-full border wrapper-shadow p-4 rounded-[12px]">
+          <div class="w-full border wrapper-shadow p-4 rounded-[12px] hidden md:block">
             <div class="w-full flex-jsb-c">
               <div class="w-full flex-js-c gap-6">
                 <div class="circle-wrapper">
@@ -640,7 +666,7 @@
             </div>
           </div>
 
-          <div class="w-full h-[52px] border wrapper-shadow rounded-[12px] mt-6 flex-jsb-c overflow-hidden">
+          <div class="w-full h-[52px] border wrapper-shadow rounded-[12px] md:mt-6 hidden sm:flex-jsb-c overflow-hidden">
             <div class="search-result-tab w-full h-full border-r cursor-pointer flex-jc-c px-2 flex-col border-t-[3px] transition group border-t-transparent [&.active]:border-t-[#3E3AFF]">
               <h3 class="font-bold group-[.active]:text-[#3E3AFF] transition-all relative top-[8px] group-[.active]:top-0">Рекомендуемые</h3>
               <span class="text-[13px] text-[#71717A] block opacity-0 transition group-[.active]:opacity-100">От 1 до 10</span>
@@ -659,29 +685,29 @@
             </div>
           </div>
 
-          <div class="mt-6">
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
+          <div class="sm:mt-6">
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[240px] object-cover">
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
                 <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
                   <div class="flex-js-s gap-[1px]">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                   </div>
                   <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
                     <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
                   </div>
                   <div class="mt-4">
                     <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
                   </div>
-                  <div class="flex-js-s gap-2 mt-4">
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
                     <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
                       1х
                     </div>
@@ -699,267 +725,37 @@
                   </div>
                 </div>
               </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
                 <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">Включая налоги и сборы</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Посмотреть</button>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
               </div>
             </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-2.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Malika Bukhara</h2>
-                  <div class="flex-js-s gap-[1px]">
-                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
-                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
-                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
-                  </div>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">0.8 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Забронировано 1 раза за последние 48 часов Осталось только 2 комнаты!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">UZS 1 813 500</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">+ Налоги и сборы (3 000 000 UZS)ы</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Посмотреть</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-3.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Ayvan Plaza</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">0.8 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">UZS 1 813 500</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 620 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">UZS 620 000</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-4.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Reikartz Bahor Bukhara</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">4.1 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">UZS 1 813 500</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 620 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Включая налоги и сборы</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-5.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Golubie Kupala</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">2 гостя, 1 ночь</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 490 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Включая налоги и сборы</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-6.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.3</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">DMG Apartments Hotel</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                    <button class="bg-white border border-[#DD2818] text-[#DD2818] px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Высокий спрос</button>
 
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">2 гостя, 1 ночь</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 490 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Включая налоги и сборы</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[240px] object-cover">
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
                 <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
                   <div class="flex-js-s gap-[1px]">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                   </div>
                   <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
                     <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
                   </div>
                   <div class="mt-4">
                     <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
                   </div>
-                  <div class="flex-js-s gap-2 mt-4">
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
                     <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
                       1х
                     </div>
@@ -977,35 +773,37 @@
                   </div>
                 </div>
               </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
                 <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">Включая налоги и сборы</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Посмотреть</button>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
               </div>
             </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
+
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-2.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
                 <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Malika Bukhara</h2>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
                   <div class="flex-js-s gap-[1px]">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                   </div>
                   <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">0.8 км от центра</span>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
                   </div>
                   <div class="mt-4">
                     <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
                   </div>
-                  <div class="flex-js-s gap-2 mt-4">
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
                     <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
                       1х
                     </div>
@@ -1017,21 +815,67 @@
                           <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
                             Бесплатная отмена
                           </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Забронировано 1 раза за последние 48 часов Осталось только 2 комнаты!
+                </div>
+              </div>
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
+                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
+              </div>
+            </div>
+
+
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
+              <div class="w-full h-full flex-js-s gap-4 pr-4">
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
                 <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">UZS 1 813 500</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">+ Налоги и сборы (3 000 000 UZS)ы</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Посмотреть</button>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
               </div>
             </div>
 
@@ -1042,210 +886,28 @@
               <img src="images/home/get-ticket-enjoy-your-flight.svg" alt="enjoy your flight" class="absolute bottom-6 sm:bottom-[33px] right-[-10px] sm:right-[50px] transform scale-[0.70] sm:scale-100">
             </div>
 
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-3.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Ayvan Plaza</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">0.8 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">UZS 1 813 500</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 620 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">UZS 620 000</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-4.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Reikartz Bahor Bukhara</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">4.1 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">UZS 1 813 500</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 620 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Включая налоги и сборы</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-5.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">10</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Golubie Kupala</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">2 гостя, 1 ночь</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 490 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Включая налоги и сборы</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-6.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.3</span>
-                </div>
-                <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">DMG Apartments Hotel</h2>
-                  <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1 км от центра</span>
-                  </div>
-                  <div class="mt-4">
-                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
-                    <button class="bg-white border border-[#DD2818] text-[#DD2818] px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Высокий спрос</button>
-
-                  </div>
-                  <div class="flex-js-s gap-2 mt-4">
-                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
-                      1х
-                    </div>
-                    <div>
-                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
-                      <ul class="mt-1">
-                        <li class="flex-js-c gap-2">
-                          <i class="icon-check text-[#1D9F18]"></i>
-                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
-                            Бесплатная отмена
-                          </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Осталось только 1 комнатa!
-                  </div>
-                </div>
-              </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
-                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">2 гостя, 1 ночь</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">UZS 490 000</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Включая налоги и сборы</button>
-              </div>
-            </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
-              <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[240px] object-cover">
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
                   <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
                 <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
                   <div class="flex-js-s gap-[1px]">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                   </div>
                   <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
                     <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
                   </div>
                   <div class="mt-4">
                     <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
                   </div>
-                  <div class="flex-js-s gap-2 mt-4">
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
                     <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
                       1х
                     </div>
@@ -1263,35 +925,37 @@
                   </div>
                 </div>
               </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
                 <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">Включая налоги и сборы</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Посмотреть</button>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
               </div>
             </div>
-            <div class="w-full border wrapper-shadow p-1 rounded-[12px] flex-jsb-c mb-4">
+
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
               <div class="w-full h-full flex-js-s gap-4 pr-4">
-                <div class="w-[140px] min-[1100px]:w-[240px] min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
-                  <img src="images/search-result/hotel-2.png" alt="hotel-1" class="w-full h-[240px] object-cover">
-                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">9.7</span>
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
                 </div>
                 <div>
-                  <h2 class="text-[24px] tracking-[-0.47px] font-bold">Гостиница Malika Bukhara</h2>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
                   <div class="flex-js-s gap-[1px]">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                     <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
                   </div>
                   <div class="flex-js-c gap-2 mt-1">
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Бухара</a>
-                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold">Показать на карте</a>
-                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">0.8 км от центра</span>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
                   </div>
                   <div class="mt-4">
                     <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
                   </div>
-                  <div class="flex-js-s gap-2 mt-4">
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
                     <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
                       1х
                     </div>
@@ -1303,23 +967,118 @@
                           <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
                             Бесплатная отмена
                           </span>
-                          <span class="text-[#71717A] text-[13px]">Без предоплаты</span>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="mt-4 text-[13px] text-[#DD2818]">
-                    Забронировано 1 раза за последние 48 часов Осталось только 2 комнаты!
+                </div>
+              </div>
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
+                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
+              </div>
+            </div>
+
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
+              <div class="w-full h-full flex-js-s gap-4 pr-4">
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 border-l flex-je-e flex-col">
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
                 <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
-                <h2 class="text-[24px] font-bold mt-1 tracking-[-0.47px]">UZS 1 813 500</h2>
-                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] mt-1">+ Налоги и сборы (3 000 000 UZS)ы</h3>
-                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3">Посмотреть</button>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
               </div>
             </div>
+
+
+            <div class="w-[calc(100%+32px)] ml-[-16px] md:ml-0 md:w-full border-b border-[#E4E7FF] md:border px-4 md:px-1 pb-2 md:pb-1 wrapper-shadow md-none-shadow p-1 md:rounded-[12px] flex-jsb-c mb-4 relative">
+              <div class="w-full h-full flex-js-s gap-4 pr-4">
+                <div class="w-[109px] sm:w-[140px] min-[1100px]:w-[240px] min-w-[109px] sm:min-w-[140px] min-[1100px]:min-w-[240px] overflow-hidden rounded-[12px] relative">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full h-[260px] md:h-[240px] object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div>
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">Завтрак включен</button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[248px] min-w-[248px] h-full min-h-[240px] p-4 md:border-l flex-je-e flex-col absolute md:relative right-0 bottom-0">
+                <h3 class="text-[14px] font-bold block md:hidden">1 номер в отеле</h3>
+                <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                <h2 class="text-[18px] sm:text-[24px] font-bold md:mt-1 tracking-[-0.47px]">USZ 1000 000</h2>
+                <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] md:mt-1">Включая налоги и сборы</h3>
+                <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden md:block">Посмотреть</button>
+              </div>
+            </div>
+
 
 
             <div class="w-full flex-jc-c mt-10">
@@ -1458,6 +1217,114 @@
 
 
 </div>
+
+
+<div class="fixed top-0 left-0 w-full h-[100dvh] flex-jc-e backdrop-blur-[4px] z-10 hidden [&.active]:flex" id="mobile-calendar">
+  <div class="w-full h-full  absolute left-0 top-0" id="close-calendar"></div>
+  <div class="w-full h-[500px] bg-white rounded-[18px_18px_0_0] relative z-10">
+      <div class="p-4">
+        <div class="w-full h-[12px] flex-jc-c">
+          <div class="w-[30px] h-[4px] bg-[#A4A8B6] rounded-full"></div>
+        </div>
+        <div class="w-full border-b h-[340px]">
+          <div>
+            <div class="w-full h-[40px] flex-jsb-c border-b">
+              <i class="icon-chevron-left text-[20px]"></i>
+              <span class="text-[18px] font-semibold">Апрель 2025</span>
+              <i class="icon-chevron-left text-[20px] transform rotate-180 text-purple"></i>
+            </div>
+            <div class="w-full h-10 grid grid-cols-7 border-b">
+              <span class="text-[14px] tracking-[-0.09px] flex-jc-c">Пн</span>
+              <span class="text-[14px] tracking-[-0.09px] flex-jc-c">Вт</span>
+              <span class="text-[14px] tracking-[-0.09px] flex-jc-c">Ср</span>
+              <span class="text-[14px] tracking-[-0.09px] flex-jc-c">Чт</span>
+              <span class="text-[14px] tracking-[-0.09px] flex-jc-c">Пт</span>
+              <span class="text-[14px] tracking-[-0.09px] flex-jc-c">Сб</span>
+              <span class="text-[14px] tracking-[-0.09px] flex-jc-c">Вс</span>
+            </div>
+            <div class="w-full h-10 grid grid-cols-7 pt-1 gap-y-[2px]">
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c text-[#889096]">1</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c text-[#889096]">2</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#3E3AFF] rounded-[2px_0_0_2px] text-white">20</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">4</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">5</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">6</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">7</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">8</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">9</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">10</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">11</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">12</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">13</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">14</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">15</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">16</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">17</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">18</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">19</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#F0F2FF]">20</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c bg-[#3E3AFF] rounded-[0_2px_2px_0] text-white">21</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">22</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">23</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">24</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">25</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">26</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">27</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">28</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">29</span>
+              <span class="h-12 text-[14px] cursor-pointer tracking-[-0.09px] flex-jc-c">30</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex-jc-c h-12 text-[14px] text-[#71717A]">
+          ср 3 апр - ср 10 (1 ночь)
+        </div>
+
+        <div class="mt-4">
+          <button class="w-full h-12 bg-[#3E3AFF] flex-jc-c text-white text-[15px] rounded-[12px]">Выбрать даты</button>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<div class="fixed top-0 left-0 w-full h-[100dvh] flex-jc-e backdrop-blur-[4px] z-10 hidden [&.active]:flex" id="mobile-sort">
+  <div class="w-full h-full  absolute left-0 top-0" id="close-sort"></div>
+  <div class="w-full bg-white rounded-[18px_18px_0_0] relative z-10">
+      <div class="p-4">
+        <div class="w-full h-[12px] flex-jc-c">
+          <div class="w-[30px] h-[4px] bg-[#A4A8B6] rounded-full"></div>
+        </div>
+        <div class="w-full">
+          <div class="flex-jsb-c">
+            <span class="text-[18px] font-semibold tracking-[-0.26px]">Сортировать</span>
+            <span class="text-[12px] text-[#71717A]">Очистить</span>
+          </div>
+          <div class="mt-6">
+            <label class="text-[14px] flex-js-c gap-2">
+              <input type="radio" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-purple">
+              Рекомендуемые
+            </label>
+            <label class="text-[14px] flex-js-c gap-2 mt-6">
+              <input type="radio" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-purple">
+              Оценка
+            </label>
+            <label class="text-[14px] flex-js-c gap-2 mt-6">
+              <input type="radio" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-purple">
+              Кол-во звезд
+            </label>
+            <label class="text-[14px] flex-js-c gap-2 mt-6">
+              <input type="radio" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-purple">
+              Цена
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
 
   <script src="js/script.js"></script>
 </body>
