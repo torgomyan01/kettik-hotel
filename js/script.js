@@ -36,13 +36,27 @@ openSort.addEventListener('click', function (){
   mobileSort.classList.add('active');
 })
 
+const mobileMap = $el('#mobile-map');
+const openMap = $el('#open-map');
+const closeMap = $el('#close-map');
+
+
+openMap.addEventListener('click', function (){
+  mobileMap.classList.add('active');
+})
+
+closeMap.addEventListener('click', function (){
+  mobileMap.classList.remove('active');
+})
 
 heroInputPlace.addEventListener('focus', HeroOneInputFocus)
 
 heroInputPlace.addEventListener('blur', HeroOneInputFocus)
 
 function HeroOneInputFocus() {
-  if (window.innerWidth < 1113) {
+  const type = +this.dataset.mobileSuccess
+
+  if (window.innerWidth < 1113 && !type) {
     return;
   }
   const thisParent = this.parentElement;
