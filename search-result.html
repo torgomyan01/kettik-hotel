@@ -599,7 +599,7 @@
             <img src="images/icons/lucide-Icon.svg" alt="icon">
             <span class="text-[14px] tracking-[-0.09px]">Сортировка</span>
           </div>
-          <div class="flex-js-c gap-2">
+          <div class="flex-js-c gap-2" id="open-mobile-filter">
             <img src="images/icons/filter.svg" alt="icon">
             <span class="text-[14px] tracking-[-0.09px]">Фильтры</span>
           </div>
@@ -637,6 +637,7 @@
               <div class="w-[249px] h-[64px] rounded-[12px] overflow-hidden flex-jc-c relative">
                 <img src="images/search-result/map.png" alt="map" class="w-full h-full object-cover">
                 <button
+                    id="open-desktop-map"
                     class="w-[157px] h-12 rounded-[12px] view-map-btn-shadow bg-white text-[14px] absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]">
                   Показать на карте
                 </button>
@@ -1451,6 +1452,781 @@
         Фильтры
       </button>
     </div>
+  </div>
+</div>
+
+
+<div class="fixed top-0 left-0 w-full h-[100dvh] bg-white z-[1000] flex-js-s flex-col hidden [&.active]:flex" id="mobile-filter">
+  <div class="w-full min-h-12 flex-jsb-c px-4 border-b">
+    <i class="icon-close text-[20px] text-black/70 cursor-pointer" id="close-mobile-filter"></i>
+    <h6 class="text-[18px] font-bold">Фильтры</h6>
+    <span class="text-[12px] text-black/40">Очистить</span>
+  </div>
+  <div class="w-full lg:border wrapper-shadow lg-none-shadow rounded-[12px] overflow-y-auto flex-grow scroll-right-none pb-[110px ]">
+
+    <div class="p-4 border-b">
+      <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Ценовой диапозон</h3>
+      <h4 class="tracking-[-0.18px]">30$ - 1795$+</h4>
+      <div class="pe-2">
+        <div class="range-day mt-4 noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
+        </div>
+    </div>
+
+    <div class="p-4 border-b">
+      <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Количество звезд</h3>
+      <div class="flex-js-s gap-3 flex-col">
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          1 звезда <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          2 звезды <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          3 звезды <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          4 звезды <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          5 звезд <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-4 border-b">
+      <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Расстояние от центра города</h3>
+      <div class="flex-js-s gap-3 flex-col">
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          меньше чем 1 км <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          меньше чем 3 км <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          меньше чем 5 км <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-4 border-b">
+      <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Тип размещения</h3>
+      <div class="flex-js-s gap-3 flex-col">
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Отель <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Гостевой дом <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-4 border-b">
+      <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Удобства отеля</h3>
+      <div class="flex-js-s gap-3 flex-col">
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Wi-fi <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Ресторан <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Бассейн <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Сауна <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Детская площадка <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Конференц-зал <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Лифт <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Семейные номера <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Трансфер <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Уличная парковка <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Гидромассажная ванна <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Оплата Master Card <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Оплата Visa Card <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="p-4 border-b">
+      <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Оценка</h3>
+      <div class="flex-js-s gap-3 flex-col">
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Очень хороший <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+        <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+          Нет оценки <span class="text-[14px] text-[#71717A]">(11)</span>
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w-full min-h-[88px] border-t flex-jc-c px-4">
+    <button class="w-full h-12 bg-[#3E3AFF] text-white rounded-[12px]">Показать 345 результатов</button>
+  </div>
+</div>
+
+
+<div class="fixed top-0 left-0 w-full h-[100dvh] backdrop-blur-[4px] z-10 flex-jc-s pt-[100px] px-6 pb-6 hidden [&.active]:block" id="desktop-map">
+  <div class="w-full bg-white h-full border rounded-[16px] border-[#1201FF33] relative p-1">
+    <button class="w-8 h-8 rounded-[12px] flex-jc-c border border-purple absolute top-[-10px] right-[-10px] bg-white z-10" id="close-desktop-map">
+      <i class="icon-close text-[23px] text-black/70"></i>
+    </button>
+
+    <div class="w-full h-full flex-js-s">
+      <div class="w-[60%] min-w-[60%] h-full flex-js-s gap-6">
+        <div class="w-[300px] min-w-[300px] h-full border-r border-purple/20 flex-js-s flex-col relative">
+          <div class="text-[24px] font-bold border-b h-[62px] flex-js-c pl-4 w-full">
+            Все фильтры
+          </div>
+          <div class="h-full w-full flex-grow overflow-y-auto scroll-right-none">
+            <div class="w-full rounded-[12px] overflow-y-auto flex-grow  pb-[85px]">
+
+              <div class="p-4 border-b">
+                <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Ценовой диапозон</h3>
+                <h4 class="tracking-[-0.18px]">30$ - 1795$+</h4>
+                <div class="pe-2">
+                  <div class="range-day mt-4 noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
+                </div>
+              </div>
+
+              <div class="p-4 border-b">
+                <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Количество звезд</h3>
+                <div class="flex-js-s gap-3 flex-col">
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    1 звезда <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    2 звезды <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    3 звезды <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    4 звезды <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    5 звезд <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="p-4 border-b">
+                <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Расстояние от центра города</h3>
+                <div class="flex-js-s gap-3 flex-col">
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    меньше чем 1 км <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    меньше чем 3 км <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    меньше чем 5 км <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="p-4 border-b">
+                <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Тип размещения</h3>
+                <div class="flex-js-s gap-3 flex-col">
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Отель <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Гостевой дом <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="p-4 border-b">
+                <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Удобства отеля</h3>
+                <div class="flex-js-s gap-3 flex-col">
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Wi-fi <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Ресторан <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Бассейн <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Сауна <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Детская площадка <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Конференц-зал <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Лифт <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Семейные номера <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Трансфер <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Уличная парковка <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Гидромассажная ванна <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Оплата Master Card <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Оплата Visa Card <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="p-4 border-b">
+                <h3 class="text-[18px] font-bold mb-2 tracking-[-0.26px]">Оценка</h3>
+                <div class="flex-js-s gap-3 flex-col">
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Очень хороший <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                  <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                    Нет оценки <span class="text-[14px] text-[#71717A]">(11)</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="w-full min-h-[88px] border-t flex-jc-c px-4 absolute left-0 bottom-0 bg-white">
+            <button class="w-full h-12 transition bg-[#3E3AFF] hover:bg-[#3E3AFF]/90 text-white rounded-[12px]">Сбросить фильтр </button>
+          </div>
+        </div>
+
+        <div class="w-full h-full pt-4 flex-js-s flex-col ">
+          <div>
+            <div class="flex-js-c gap-2 cursor-pointer">
+              <img src="images/icons/lucide-Icon.svg" alt="icon">
+              <span class="text-[14px] tracking-[-0.09px]">Сортировка</span>
+            </div>
+          </div>
+
+          <div class="w-full mt-4 flex-grow overflow-y-auto bg-white pr-2">
+
+            <div class="w-full rounded-[12px] border-b border-[#E4E7FF] md:border px-2 pb-2 wrapper-shadow md-none-shadow p-1 flex-jsb-c mb-4 relative transition hover:bg-[#F0F2FF]">
+              <div class="w-full h-full flex-js-s gap-4 items-stretch">
+                <div class="w-[109px] min-w-[109px] min-h-full overflow-hidden rounded-[12px] relative bg-red-600">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full min-hh-[260px] h-full object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div class="w-full h-full">
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать
+                      на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">
+                      Завтрак включен
+                    </button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="w-full p-4 flex-je-e flex-col">
+                    <h3 class="text-[14px] font-bold block">1 номер в отеле</h3>
+                    <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                    <h2 class="text-[18px] sm:text-[24px] font-bold tracking-[-0.47px]">USZ 1000 000</h2>
+                    <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] ">Включая налоги и сборы</h3>
+                    <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden">Посмотреть
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full rounded-[12px] border-b border-[#E4E7FF] md:border px-2 pb-2 wrapper-shadow md-none-shadow p-1 flex-jsb-c mb-4 relative transition hover:bg-[#F0F2FF]">
+              <div class="w-full h-full flex-js-s gap-4 items-stretch">
+                <div class="w-[109px] min-w-[109px] min-h-full overflow-hidden rounded-[12px] relative bg-red-600">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full min-hh-[260px] h-full object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div class="w-full h-full">
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать
+                      на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">
+                      Завтрак включен
+                    </button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="w-full p-4 flex-je-e flex-col">
+                    <h3 class="text-[14px] font-bold block">1 номер в отеле</h3>
+                    <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                    <h2 class="text-[18px] sm:text-[24px] font-bold tracking-[-0.47px]">USZ 1000 000</h2>
+                    <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] ">Включая налоги и сборы</h3>
+                    <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden">Посмотреть
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full rounded-[12px] border-b border-[#E4E7FF] md:border px-2 pb-2 wrapper-shadow md-none-shadow p-1 flex-jsb-c mb-4 relative transition hover:bg-[#F0F2FF]">
+              <div class="w-full h-full flex-js-s gap-4 items-stretch">
+                <div class="w-[109px] min-w-[109px] min-h-full overflow-hidden rounded-[12px] relative bg-red-600">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full min-hh-[260px] h-full object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div class="w-full h-full">
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать
+                      на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">
+                      Завтрак включен
+                    </button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="w-full p-4 flex-je-e flex-col">
+                    <h3 class="text-[14px] font-bold block">1 номер в отеле</h3>
+                    <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                    <h2 class="text-[18px] sm:text-[24px] font-bold tracking-[-0.47px]">USZ 1000 000</h2>
+                    <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] ">Включая налоги и сборы</h3>
+                    <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden">Посмотреть
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full rounded-[12px] border-b border-[#E4E7FF] md:border px-2 pb-2 wrapper-shadow md-none-shadow p-1 flex-jsb-c mb-4 relative transition hover:bg-[#F0F2FF]">
+              <div class="w-full h-full flex-js-s gap-4 items-stretch">
+                <div class="w-[109px] min-w-[109px] min-h-full overflow-hidden rounded-[12px] relative bg-red-600">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full min-hh-[260px] h-full object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div class="w-full h-full">
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать
+                      на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">
+                      Завтрак включен
+                    </button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="w-full p-4 flex-je-e flex-col">
+                    <h3 class="text-[14px] font-bold block">1 номер в отеле</h3>
+                    <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                    <h2 class="text-[18px] sm:text-[24px] font-bold tracking-[-0.47px]">USZ 1000 000</h2>
+                    <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] ">Включая налоги и сборы</h3>
+                    <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden">Посмотреть
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full rounded-[12px] border-b border-[#E4E7FF] md:border px-2 pb-2 wrapper-shadow md-none-shadow p-1 flex-jsb-c mb-4 relative transition hover:bg-[#F0F2FF]">
+              <div class="w-full h-full flex-js-s gap-4 items-stretch">
+                <div class="w-[109px] min-w-[109px] min-h-full overflow-hidden rounded-[12px] relative bg-red-600">
+                  <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full min-hh-[260px] h-full object-cover">
+                  <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                </div>
+                <div class="w-full h-full">
+                  <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                  <div class="flex-js-s gap-[1px]">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                  </div>
+                  <div class="flex-js-c gap-2 mt-1">
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                    <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать
+                      на карте</a>
+                    <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                  </div>
+                  <div class="mt-4">
+                    <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">
+                      Завтрак включен
+                    </button>
+                  </div>
+                  <div class="hidden md:flex-js-s gap-2 mt-4">
+                    <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                      1х
+                    </div>
+                    <div>
+                      <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                      <ul class="mt-1">
+                        <li class="flex-js-c gap-2">
+                          <i class="icon-check text-[#1D9F18]"></i>
+                          <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="w-full p-4 flex-je-e flex-col">
+                    <h3 class="text-[14px] font-bold block">1 номер в отеле</h3>
+                    <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                    <h2 class="text-[18px] sm:text-[24px] font-bold tracking-[-0.47px]">USZ 1000 000</h2>
+                    <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] ">Включая налоги и сборы</h3>
+                    <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden">Посмотреть
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="w-[40%] h-full flex-js-s relative overflow-hidden border-l border-purple-600">
+        <div style="position:relative;overflow:hidden;" class="w-full">
+          <iframe src="https://yandex.com/map-widget/v1/?ll=44.510596%2C40.181486&z=13.55" width="100%" height="100%" style="position:relative;height: 100dvh"></iframe>
+        </div>
+
+        <div class="w-full py-4 pr-[10px] absolute top-4 ">
+          <div class="w-full flex-jsb-c mt-4 gap-[10px]">
+            <button class="w-12 min-w-12 h-12 rounded-[0_12px_12px_0] border bg-white border-l-0">
+              <i class="icon-chevron-left text-[20px] text-[#3E3AFF] mb-[-1px] block"></i>
+            </button>
+            <label class="w-full h-12 rounded-[12px] border bg-white flex-js-c pl-3 gap-2 overflow-hidden">
+              <i class="icon-search text-[22px] text-[#3E3AFF]"></i>
+              <input type="text" class="w-full h-full" placeholder="Искать на карте">
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </div>
 

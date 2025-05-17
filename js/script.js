@@ -19,7 +19,7 @@ const heroInputRes = $el('#hero-input-res');
 const mobileCalendar = $el('#mobile-calendar');
 const closeCalendar = $el('#close-calendar');
 
-closeCalendar.addEventListener('click', function (){
+closeCalendar?.addEventListener('click', function (){
   mobileCalendar.classList.remove('active');
 })
 
@@ -28,11 +28,11 @@ const mobileSort = $el('#mobile-sort');
 const closeSort = $el('#close-sort');
 const openSort = $el('#open-sort');
 
-closeSort.addEventListener('click', function (){
+closeSort?.addEventListener('click', function (){
   mobileSort.classList.remove('active');
 })
 
-openSort.addEventListener('click', function (){
+openSort?.addEventListener('click', function (){
   mobileSort.classList.add('active');
 })
 
@@ -41,17 +41,46 @@ const openMap = $el('#open-map');
 const closeMap = $el('#close-map');
 
 
-openMap.addEventListener('click', function (){
+openMap?.addEventListener('click', function (){
   mobileMap.classList.add('active');
 })
 
-closeMap.addEventListener('click', function (){
+closeMap?.addEventListener('click', function (){
   mobileMap.classList.remove('active');
 })
 
-heroInputPlace.addEventListener('focus', HeroOneInputFocus)
 
-heroInputPlace.addEventListener('blur', HeroOneInputFocus)
+const mobileFilter = $el('#mobile-filter');
+const openMobileFilter = $el('#open-mobile-filter');
+const closeMobileFilter = $el('#close-mobile-filter');
+
+
+openMobileFilter?.addEventListener('click', function (){
+  mobileFilter.classList.add('active');
+})
+
+closeMobileFilter?.addEventListener('click', function (){
+  mobileFilter.classList.remove('active');
+})
+
+const desktopMap = $el('#desktop-map');
+const openDesktopMap = $el('#open-desktop-map');
+const closeDesktopMap = $el('#close-desktop-map');
+
+
+openDesktopMap?.addEventListener('click', function (){
+  document.body.style.overflow = 'hidden';
+  desktopMap.classList.add('active');
+})
+
+closeDesktopMap?.addEventListener('click', function (){
+  document.body.style.overflow = null;
+  desktopMap.classList.remove('active');
+})
+
+heroInputPlace?.addEventListener('focus', HeroOneInputFocus)
+
+heroInputPlace?.addEventListener('blur', HeroOneInputFocus)
 
 function HeroOneInputFocus() {
   const type = +this.dataset.mobileSuccess
@@ -119,8 +148,6 @@ const rangeDay = $('.range-day');
 const priceMinMax = $el('#price-min-max');
 
 rangeDay.forEach((item) => {
-
-
   noUiSlider.create(item, {
     start: [25, 800],
     connect: true,
@@ -135,7 +162,9 @@ rangeDay.forEach((item) => {
     const hourStart = (+values[0]).toFixed(0).replace(/.00/, '');
     const hourEnd = (+values[1]).toFixed(0).replace(/.00/, '');
 
-    priceMinMax.innerText = `${hourStart}$ - 1${hourEnd}$+`;
+    if(priceMinMax){
+      priceMinMax.innerText = `${hourStart}$ - 1${hourEnd}$+`;
+    }
   });
 
 })

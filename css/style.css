@@ -436,6 +436,10 @@ input:focus {
   height: 0;
 }
 
+.scroll-right-none::-webkit-scrollbar {
+  width: 0;
+}
+
 .mobile-menu-board {
   width: 30px;
   height: 30px;
