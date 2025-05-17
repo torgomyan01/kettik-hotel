@@ -1428,6 +1428,14 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.col-span-3{
+  grid-column: span 3 / span 3;
+}
+
+.col-span-4{
+  grid-column: span 4 / span 4;
+}
+
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -2357,6 +2365,11 @@ video {
   padding-bottom: 8px;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -2461,6 +2474,10 @@ video {
   padding-right: 10px;
 }
 
+.pl-1{
+  padding-left: 0.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -2525,12 +2542,20 @@ video {
   font-size: 23px;
 }
 
+.text-\[11px\]{
+  font-size: 11px;
+}
+
 .font-bold{
   font-weight: 700;
 }
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .leading-\[116\%\]{
@@ -2806,6 +2831,16 @@ video {
   opacity: 1;
 }
 
+@media (min-width: 375px){
+  .min-\[375px\]\:gap-4{
+    gap: 1rem;
+  }
+
+  .min-\[375px\]\:text-\[14px\]{
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 427px){
   .min-\[427px\]\:flex-row{
     flex-direction: row;
@@ -3043,6 +3078,10 @@ video {
 @media (min-width: 1024px){
   .lg\:col-span-1{
     grid-column: span 1 / span 1;
+  }
+
+  .lg\:col-span-3{
+    grid-column: span 3 / span 3;
   }
 
   .lg\:mt-0{
