@@ -30,7 +30,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  color: #11181C;
+  color: #27272A;
   letter-spacing: -0.5px;
 }
 
@@ -381,7 +381,7 @@ input:focus {
 }
 
 .shadow-free-item {
-  box-shadow: 0 2px 4px 0 rgba(17, 80, 203, 0.1), 0px 24px 60px 0px rgba(17, 80, 203, 0.05), 0px 12px 24px 0px rgba(17, 80, 203, 0.05);
+  box-shadow: 0 2px 4px 0 rgba(17, 80, 203, 0.1), 0 24px 60px 0 rgba(17, 80, 203, 0.05), 0 12px 24px 0 rgba(17, 80, 203, 0.05);
 }
 
 .lounges-title {
@@ -411,7 +411,7 @@ input:focus {
 }
 
 .wrapper-shadow {
-  box-shadow: 0px 0px 0.5px 0px rgba(18, 1, 255, 0.2), 0px 0.5px 2px 0px #CDD3FF;
+  box-shadow: 0 0 0.5px 0 rgba(18, 1, 255, 0.2), 0px 0.5px 2px 0px #CDD3FF;
 }
 @media (max-width: 1024px) {
   .wrapper-shadow.lg-none-shadow {
@@ -574,6 +574,10 @@ input:focus {
     color: #111;
   }
 }
+.rating-blue {
+  box-shadow: 4px 4px 0px 0px #A5ACFF;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
