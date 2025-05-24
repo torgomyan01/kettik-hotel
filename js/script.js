@@ -205,3 +205,40 @@ searchResultTab.forEach((item) => {
   })
 })
 
+const sliderActiveItem = $('.slider-active-item');
+const sliderItemsCount = $('.slider-items-count');
+
+const swiper = new Swiper('.swiper', {
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
+swiper.on('slideChange', function () {
+
+  sliderActiveItem.forEach((item) => {
+    item.innerText = swiper.activeIndex + 1;
+  })
+});
+
+
+sliderItemsCount.forEach((item) => {
+  item.innerText = swiper.slides.length;
+})
+
+const accordionItem = $('.accordion-item');
+
+accordionItem.forEach((item) => {
+  item.addEventListener('click', function () {
+    // accordionItem.forEach((item) => item.classList.remove('active'));
+
+    this.classList.toggle('active');
+
+  })
+
+
+})

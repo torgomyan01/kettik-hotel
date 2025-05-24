@@ -133,6 +133,10 @@ input:focus {
   box-shadow: 0 2px 4px 0 rgba(17, 80, 203, 0.10), 0 24px 60px 0 rgba(17, 80, 203, 0.05), 0 12px 24px 0 rgba(17, 80, 203, 0.05);
 }
 
+.shadow-share-btn{
+  box-shadow: 0px 10px 20px 2px rgba(39, 39, 42, 0.10), 0px -1px 0px 0px rgba(18, 1, 255, 0.20), -1px 0px 0px 0px rgba(18, 1, 255, 0.20), 1px 0px 0px 0px rgba(18, 1, 255, 0.20), 0px 1px 0px 0px rgba(18, 1, 255, 0.20);
+}
+
 .lounges-title{
   background: linear-gradient(90deg, #FFF 50.12%, rgba(255, 255, 255, 0.00) 99.99%);
 }
@@ -190,6 +194,27 @@ input:focus {
   &::-webkit-scrollbar {
     width: 0;
   }
+}
+
+.swiper-button-next, .swiper-button-prev{
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 0 0 12px;
+  background: rgba(255, 255, 255, 0.40);
+  right: -10px;
+ &:after{
+   font-size: 18px !important;
+   color: #3E3AFF;
+   font-weight: bold;
+ }
+}
+
+.swiper-button-prev{
+  left: -10px;
+  right: unset;
+  border-radius: 0 12px 12px 0;
 }
 
 .mobile-menu-board{
