@@ -239,6 +239,25 @@ accordionItem.forEach((item) => {
     this.classList.toggle('active');
 
   })
-
-
 })
+
+
+
+const defaultInputs = $('.def-input input');
+
+defaultInputs.forEach(input => {
+  // Focus event
+  input.addEventListener('focus', () => {
+    input.parentElement.classList.add('active');
+  });
+
+  // Blur event
+  input.addEventListener('blur', () => {
+    $('.def-input').forEach(wrapper => {
+      const childInput = wrapper.querySelector('input');
+      if (childInput && childInput.value === '') {
+        wrapper.classList.remove('active');
+      }
+    });
+  });
+});
