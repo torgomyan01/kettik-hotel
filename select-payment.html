@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="fonts/style.css">
+
+  <link rel="stylesheet" href="css/output.css">
+
+  <script src="js/aos.js"></script>
+  <script src="js/nouislider.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <title>Kettik Hotel Details</title>
+</head>
+<body>
+
+
+  <nav class="w-full h-[56px] md:h-[82px] bg-[#0E00D6] flex-jc-c">
+    <div class="container flex-jsb-c">
+      <a href="/">
+        <img src="images/home/logo.svg" alt="Logo" class="hidden md:block">
+        <img src="images/home/logo-mobile.svg" alt="Logo" class="block md:hidden">
+      </a>
+      <div class="flex-jc-e gap-2 hidden min-[846px]:flex">
+        <div class="flex-jc-c flex-col">
+          <img src="images/icons/green-check.svg" alt="check icon">
+          <span class="text-white tracking-[-0.18px] hidden min-[1113px]:block">Результаты поиска</span>
+        </div>
+        <div class="w-[16px] min-w-[16px] h-[1px] bg-white mb-3"></div>
+        <div class="flex-jc-c flex-col">
+          <img src="images/icons/green-check.svg" alt="check icon">
+          <span class="text-white tracking-[-0.18px] hidden min-[1113px]:block">Бронирование</span>
+        </div>
+        <div class="w-[16px] min-w-[16px] h-[1px] bg-white mb-3"></div>
+        <div class="flex-jc-c flex-col">
+          <div class="w-[24px] h-[24px] flex-jc-c bg-[#00D9FF] rounded-full text-[#0E00D6]">
+            3
+          </div>
+          <span class="text-white tracking-[-0.18px] hidden min-[1113px]:block">Итоги и оплата</span>
+        </div>
+      </div>
+
+
+      <div class="flex-je-c gap-4 hidden md:flex">
+        <button class="text-white flex-jc-c gap-2">
+          Авиабилеты
+          <i class="icon icon-arrow_drop_down text-white"></i>
+        </button>
+        <button class="text-white flex-jc-c gap-2">
+          RU
+          <i class="icon icon-arrow_drop_down text-white"></i>
+        </button>
+        <div class="min-w-[1px] h-[16px] bg-[#FFF0E0]"></div>
+        <button class="text-white flex-jc-c gap-2">
+          UZS
+          <i class="icon icon-arrow_drop_down text-white"></i>
+        </button>
+        <button class="text-white flex-jc-c gap-2 border border-[#FFF0E0] rounded-full px-[18px] py-[8px]">
+          Войти в аккаунт
+        </button>
+
+      </div>
+
+      <div class="mobile-menu-board flex md:hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="rounded-[32px] pt-8 bg-white relative z-1 pb-[1px] sm:pb-10">
+    <div class="container mb-6 relative">
+      <div class="flex-js-s gap-4 h-full items-stretch">
+        <div class="w-full lg:w-[calc(100%-360px)]">
+
+          <div class="flex-jc-e gap-2 w-full mb-2 md:hidden">
+            <div class="flex-jc-c flex-col min-w-[22px]">
+              <img src="images/icons/green-check.svg" alt="check icon" >
+            </div>
+            <div class="w-full h-[1px] bg-[#A4A8B6] mb-3"></div>
+            <div class="flex-jc-c flex-col  min-w-[22px]">
+              <img src="images/icons/green-check.svg" alt="check icon" >
+            </div>
+            <div class="w-full h-[1px] bg-[#A4A8B6] mb-3"></div>
+            <div class="flex-jc-c flex-col  min-w-[22px]">
+              <div class="w-[24px] h-[24px] flex-jc-c rounded-full text-white bg-[#3E3AFF]">
+                3
+              </div>
+            </div>
+          </div>
+
+          <h5 class="w-[calc(100%+32px)] ml-[-16px] text-center text-[13px] font-bold mb-4 block md:hidden border-b pb-3">
+            Итоги и оплата
+          </h5>
+
+         <section class="flex-js-s gap-6 flex-col md:flex-row">
+           <div>
+             <h1 class="text-[20px] sm:text-[30px] raleway-font font-semibold">Гостиница FAYZ</h1>
+             <div class="flex-js-s gap-[1px] mt-1">
+               <img src="images/icons/star.svg" alt="star icon" width="13" height="14">
+               <img src="images/icons/star.svg" alt="star icon" width="13" height="14">
+               <img src="images/icons/star.svg" alt="star icon" width="13" height="14">
+             </div>
+             <div class="sm:flex-js-c gap-2 mt-3 text-[14px] text-[#71717A]">
+               <img src="images/icons/icon-map-purple.svg" alt="map icon" class="inline-block" align="left">
+               Ташкент, Чиланзарский район, 3 проезд ул. Навбахор д. 83а
+             </div>
+             <div class="mt-4 flex-js-c gap-4 text-[14px]">
+               <div class="w-9 h-9 min-w-9 flex-jc-c rounded-[5px] text-white bg-[#3E3AFF] rating-blue">
+                 10
+               </div>
+               Данный объект находится в хорошем месте. Гости оценили его на 10
+             </div>
+           </div>
+         </section>
+
+
+          <div class="w-full block lg:hidden mt-4">
+
+            <div class="w-full p-4 ">
+              <div class="w-full flex-jsb-c mt-4 border-b pb-2">
+                <div class="w-[50%] border-r ">
+                  <h5 class="text-[13px]">Дата заезда</h5>
+                  <h5 class="font-medium">ср 16 апр</h5>
+                </div>
+                <div class="w-[50%] pl-6">
+                  <h5 class="text-[13px]">Дата отьезда</h5>
+                  <h5 class="font-medium">чт 17 апр</h5>
+                </div>
+              </div>
+
+              <div class="w-full mt-2 flex-jsb-c">
+                <h5 class="text-[13px] font-semibold">1 ночь</h5>
+                <h5 class="text-[13px] font-semibold">5 гостей</h5>
+                <h5 class="text-[13px] font-semibold">3 номера</h5>
+              </div>
+
+              <div class="flex-jc-c">
+                <span class="text-[#3E3AFF] text-[14px] cursor-auto mt-4 font-medium">Изменить параметры</span>
+              </div>
+
+            </div>
+
+            <div class="rounded-[12px] mt-2 accordion-item group">
+
+              <div class="w-full flex-jsb-c mt-2">
+                <div class="flex-jsb-c w-full mb-4">
+                  <div>
+                    <h6 class="text-[13px]">Вы выбрали:</h6>
+                    <h5 class="text-[14px] font-bold">3 номера для 4 взрослых, 1 ребенок</h5>
+                  </div>
+                  <div class="w-9 h-9 rounded-full flex-jc-c bg-[#F0F2FF] transition transform group-[&.active]:rotate-180">
+                    <i class="icon-down text-[#3E3AFF] text-[9px]"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden group-[&.active]:block">
+
+                <div class="border border-[#E4E7FF] shadow rounded-[12px] shadow-free-item mb-4">
+                  <div class="flex-jsb-c w-full p-4 border-b">
+                    <h4 class="text-[14px] font-semibold">
+                      Стандартный трехместный номер
+                    </h4>
+                    <img src="images/icons/worning.svg" alt="worning">
+                  </div>
+
+                  <div class="p-4 w-full">
+                    <div class="py-4 flex-jsb-c w-full border-b border-dashed gap-4">
+                      <div>
+                        <h5 class="text-[14px] font-medium">1 ночь</h5>
+                        <h4 class="text-[14px]">
+                          Вы платите во время
+                          <br>
+                          проживания
+                        </h4>
+                      </div>
+                      <h6 class="text-[14px] text-nowrap">
+                        UZS 6 000 000
+                      </h6>
+                    </div>
+                    <div class="py-4 flex-jsb-c w-full gap-4">
+                      <div>
+                        <h5 class="text-[14px] font-medium">Дополнительные сборы</h5>
+                        <h4 class="text-[14px]">
+                          НДС
+                        </h4>
+                      </div>
+                      <h6 class="text-[14px] text-nowrap">
+                        UZS 0
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="border border-[#E4E7FF] shadow rounded-[12px] shadow-free-item mb-4">
+                  <div class="flex-jsb-c w-full p-4 border-b">
+                    <h4 class="text-[14px] font-semibold">
+                      Улучшений одноместный номер- одноместное размещение
+                    </h4>
+                    <img src="images/icons/worning.svg" alt="worning">
+                  </div>
+
+                  <div class="p-4 w-full">
+                    <div class="py-4 flex-jsb-c w-full border-b border-dashed gap-4">
+                      <div>
+                        <h5 class="text-[14px] font-medium">1 ночь</h5>
+                        <h4 class="text-[14px]">
+                          Цена без учета <br>
+                          налогов и сборов
+                        </h4>
+                      </div>
+                      <h6 class="text-[14px] text-nowrap">
+                        UZS 6 000 000
+                      </h6>
+                    </div>
+                    <div class="py-4 flex-jsb-c w-full gap-4">
+                      <div>
+                        <h5 class="text-[14px] font-medium">Дополнительные сборы</h5>
+                        <h4 class="text-[14px]">
+                          НДС
+                        </h4>
+                      </div>
+                      <h6 class="text-[14px] text-nowrap">
+                        UZS 0
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border border-[#E4E7FF] shadow rounded-[12px] shadow-free-item mb-4">
+                  <div class="flex-jsb-c w-full p-4 border-b">
+                    <h4 class="text-[14px] font-semibold">
+                      Улучшений одноместный номер- одноместное размещение
+                    </h4>
+                    <img src="images/icons/worning.svg" alt="worning">
+                  </div>
+
+                  <div class="p-4 w-full">
+                    <div class="py-4 flex-jsb-c w-full border-b border-dashed gap-4">
+                      <div>
+                        <h5 class="text-[14px] font-medium">1 ночь</h5>
+                        <h4 class="text-[14px]">
+                          Цена без учета <br>
+                          налогов и сборов
+                        </h4>
+                      </div>
+                      <h6 class="text-[14px] text-nowrap">
+                        UZS 6 000 000
+                      </h6>
+                    </div>
+                    <div class="py-4 flex-jsb-c w-full gap-4">
+                      <div>
+                        <h5 class="text-[14px] font-medium">Дополнительные сборы</h5>
+                        <h4 class="text-[14px]">
+                          НДС
+                        </h4>
+                      </div>
+                      <h6 class="text-[14px] text-nowrap">
+                        UZS 0
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="py-4 flex-jsb-c gap-4 bg-[#F0F2FF] px-5 md:border-t w-[calc(100%+32px)] ml-[-16px]">
+                <h4 class="text-[14px] font-medium">
+                  Цена
+                </h4>
+                <span class="text-[14px] text-nowrap font-semibold">
+                  UZS 104 018 480
+                </span>
+              </div>
+            </div>
+
+            <div class="border border-[#E4E7FF] rounded-[12px] mt-2 hidden md:block">
+              <h4 class="text-[18px] font-semibold p-4 border-b">
+                Ваш график платежей
+              </h4>
+
+              <div class="p-4 w-full">
+                <p class="text-[14px]">
+                  Сегодня оплата не требуется, вы платите во время проживания
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <section class="w-full md:p-6 md:border md:rounded-[12px] mt-4 mb-6">
+            <div class="w-full flex-jsb-c mb-6">
+              <h3 class="text-[18px] md:text-[24px] font-bold">Ваши данные </h3>
+
+              <div class="cursor-pointer text-[#3E3AFF] font-medium block md:hidden">
+                Изменить
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h4 class="font-bold">Анна</h4>
+              <h5 class="text-[14px] text-[#71717A]">Анна</h5>
+            </div>
+
+            <div class="mb-4 border-b pb-2">
+              <h4 class="font-bold">Коломийцева-Терец</h4>
+              <h5 class="text-[14px] text-[#71717A]">Фамилия</h5>
+            </div>
+
+            <div class="mb-4 border-b pb-2">
+              <h4 class="font-bold">koloma@ukr.net</h4>
+              <h5 class="text-[14px] text-[#71717A]">Еmail</h5>
+            </div>
+
+            <div class="mb-4 border-b pb-2">
+              <h4 class="font-bold">Узбекистан</h4>
+              <h5 class="text-[14px] text-[#71717A]">Страна</h5>
+            </div>
+
+            <div class="mb-4 border-b pb-2">
+              <h4 class="font-bold">+99856785987</h4>
+              <h5 class="text-[14px] text-[#71717A]">Телефон</h5>
+            </div>
+
+            <div>
+              <label class="flex-js-c gap-4">
+                <span class="w-6 min-w-6 h-6 border border-[#3E3AFF] rounded-[5px] text-[#27272A] tracking-[-0.18px] flex-jc-c gap-4">
+                  <input type="checkbox" class="hidden peer">
+                  <img src="images/icons/checked.svg" alt="checked" class="transition opacity-0 peer-checked:opacity-100">
+                </span>
+                Да, отправьте мне бесплатное электронное подтверждение бронирования (рекомендуется)
+              </label>
+            </div>
+
+          </section>
+
+          <section class="w-full md:p-6 md:border md:rounded-[12px] mt-4 mb-6">
+            <h3 class="text-[18px] md:text-[24px] font-bold mb-6">Метод платежа</h3>
+
+
+            <div class="w-full h-[64px] border border-[#3E3AFF] rounded-[12px] flex-jsb-c px-4">
+              <div>
+                <h4 class="font-bold">На месте</h4>
+                <h6 class="text-[13px] text-[#71717A]">Наличные деньги</h6>
+              </div>
+              <img src="images/icons/wallet.svg" alt="wallet">
+            </div>
+
+            <p class="text-[14px] mt-6">
+              Ваше бронирование осуществляется непосредственно в отеле < Название отеля> и, завершив его, вы соглашаетесь с
+              <a href="#" class="text-[#3E3AFF]">условиями бронирования</a>, <a href="#" class="text-[#3E3AFF]">общими условиями</a> и <a href="#" class="text-[#3E3AFF]">политикой конфеденциальности</a>
+            </p>
+
+
+          </section>
+
+          <div class="flex-je-c mt-4">
+            <button class="w-full sm:w-auto h-12 text-[18px] bg-[#3E3AFF] rounded-[12px] text-white mt-4 px-10">
+              Забронировать
+            </button>
+          </div>
+
+        </div>
+
+
+        <div class="min-w-[360px] w-[360px] hidden lg:block">
+          <div class="border border-[#E4E7FF] shadow rounded-[12px] shadow-free-item">
+            <h4 class="text-[18px] font-semibold p-4 border-b">
+              Ваши данные бронирования
+            </h4>
+
+            <div class="p-4 w-full">
+              <div class="mb-4">
+                <h4 class="font-bold">Дата заезда</h4>
+                <h5 class="text-[14px] text-[#71717A]">пт, 2 мая 2025 с 14:00</h5>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-bold">Дата отъезда</h4>
+                <h5 class="text-[14px] text-[#71717A]">вс, 4 мая 2025 до 12:00</h5>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-bold">Продолжительность проживания</h4>
+                <h5 class="text-[14px] text-[#71717A]">2 ночи</h5>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-bold">Число гостей</h4>
+                <h5 class="text-[14px] text-[#71717A]">3 гостя</h5>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-bold">Количество номеров</h4>
+                <h5 class="text-[14px] text-[#71717A]">1 номер</h5>
+              </div>
+
+              <div class="mt-6 cursor-pointer text-[#3E3AFF]">
+                Изменить параметры
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-[#E4E7FF] shadow rounded-[12px] shadow-free-item mt-2">
+            <h4 class="text-[18px] font-semibold p-4 border-b">
+              Стоимость бронирования
+            </h4>
+
+            <div class="p-4 w-full">
+              <div class="py-4 flex-jsb-c w-full gap-4 border-b border-dashed">
+                <h4 class="text-[14px] w-[50%]">
+                  Стандартный одноместный номер
+                </h4>
+                <span class="text-[14px] text-nowrap">
+                  UZS 40 000 000
+                </span>
+              </div>
+              <div class="py-4 flex-jsb-c w-full gap-4">
+                <h4 class="text-[14px]">
+                  НДС
+                </h4>
+                <span class="text-[14px] text-nowrap">
+                  UZS 4 800
+                </span>
+              </div>
+              <div class="py-4 flex-jsb-c w-full gap-4 border-b">
+                <h4 class="text-[14px] flex-js-c gap-2">
+                  Тур сбор
+                  <img src="images/icons/lucide-Icon-two.svg" alt="">
+                </h4>
+                <span class="text-[14px] text-nowrap">
+                  UZS 3 000
+                </span>
+              </div>
+              <div class="py-4 flex-jsb-c w-full gap-4 border-b border-dashed">
+                <h4 class="text-[14px] w-[50%]">
+                  Стандартный двухместный номер с 2 отдельными кроватями
+                </h4>
+                <span class="text-[14px] text-nowrap">
+                  UZS 64 000 000
+                </span>
+              </div>
+
+              <div class="py-4 flex-jsb-c w-full gap-4">
+                <h4 class="text-[14px]">
+                  НДС
+                </h4>
+                <span class="text-[14px] text-nowrap">
+                  UZS 4 800
+                </span>
+              </div>
+              <div class="py-4 flex-jsb-c w-full gap-4">
+                <h4 class="text-[14px] flex-js-c gap-2">
+                  Тур сбор
+                  <img src="images/icons/lucide-Icon-two.svg" alt="">
+                </h4>
+                <span class="text-[14px] text-nowrap">
+                  UZS 3 000
+                </span>
+              </div>
+            </div>
+
+            <div class="py-4 flex-jsb-c w-full gap-4 bg-[#F0F2FF] rounded-[0_0_12px_12px] px-4 border-t">
+              <h4 class="text-[14px] font-medium">
+                Цена
+              </h4>
+              <span class="text-[14px] text-nowrap font-semibold">
+                  UZS 104 018 480
+                </span>
+            </div>
+          </div>
+
+          <div class="border border-[#E4E7FF] shadow rounded-[12px] shadow-free-item mt-2">
+            <h4 class="text-[18px] font-semibold p-4 border-b">
+              Ваш график платежей
+            </h4>
+
+            <div class="p-4 w-full">
+              <p class="text-[14px]">
+                Сегодня оплата не требуется, вы платите во время проживания
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section
+      class="contact-section w-full md:h-[480px] mt-[-100px] pt-[130px] md:pt-[110px] rounded-[32px] pb-12 bg-white">
+    <div class="container h-full">
+      <div class="w-full flex-jsb-c h-full gap-6 flex-col md:flex-row">
+        <div class="w-full flex-js-c gap-6">
+          <h4 class="md:text-[20px] md:font-bold text-[#27272A] w-full md:w-[161px] md:mb-[22px] order-2 md:order-1">Ваш
+            агент всегда на связи</h4>
+          <a href="#" class="order-1 md:order-2">
+            <img src="images/icons/tg.svg" alt="tg" width="105" height="105"
+                 class="w-[42px] md:w-[105px] h-[42px] md:h-[105px]">
+          </a>
+        </div>
+        <div class="w-full">
+          <h4 class="md:text-[20px] font-bold text-[#27272A] mb-[22px]">Укажите удобное время для звонка </h4>
+          <div class="w-full flex-jsb-c gap-3 flex-col md:flex-row">
+            <label class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+              <img src="images/icons/user.svg" alt="icon user" width="20" height="20">
+              <input type="text" placeholder="Имя" class="placeholder:text-[#71717A] w-full">
+            </label>
+            <label class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+              <img src="images/icons/call.svg" alt="" width="20" height="20">
+              <input type="text" placeholder="Номер телефона" class="placeholder:text-[#71717A] w-full">
+            </label>
+            <label class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-jsb-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px] cursor-pointer">
+              <span>СР, 12:15 </span>
+              <img src="images/icons/suffix-time.svg" alt="suffix-time" width="20" height="20">
+            </label>
+          </div>
+          <div class="mt-6 w-full">
+            <button class="w-full md:w-[287px] h-12 rounded-[12px] bg-[#00D9FF] hover:bg-[#00D9F3] text-[#0D607D]">
+              Отправить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full bg-[#0E00D6] mt-[-50px] z-[-100] relative">
+    <div class="container pt-[100px] block min-[1138px]:hidden">
+      <div class="flex-jc-c">
+        <a href="#">
+          <img src="images/icons/footer-logo.svg" alt="logo">
+        </a>
+      </div>
+      <div class="flex-jsb-s gap-4 mt-6">
+        <div class="flex-js-s gap-6 flex-col">
+          <a href="#" class="text-white">О сервисе</a>
+          <a href="#" class="text-white">Обратная связь</a>
+          <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+          <div class="flex-js-e gap-2">
+            <span class="text-white text-[40px]">007</span>
+            <span
+                class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для <br> абонентов Билайн и OQ</span>
+          </div>
+        </div>
+        <div class="flex-js-c gap-8 flex-col">
+          <a href="#">
+            <img src="images/icons/fb.svg" alt="fb">
+          </a>
+          <a href="#">
+            <img src="images/icons/insta.svg" alt="insta">
+          </a>
+          <a href="#">
+            <img src="images/icons/Telegram.svg" alt="telegram">
+          </a>
+          <a href="#">
+            <img src="images/icons/youtube.svg" alt="youtube">
+          </a>
+        </div>
+      </div>
+      <div class="flex-jsb-c mt-6">
+        <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+        <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+      </div>
+      <div class="w-full mt-4 h-[1px] bg-white/30"></div>
+      <div class="mt-4 text-center text-[#FFF0E0] pb-6 tracking-[-0.18px] opacity-70">
+        © 2024 Kettik. All rights reserved
+      </div>
+    </div>
+    <div class="container pt-[100px] hidden min-[1138px]:block">
+      <div class="flex-jsb-c">
+        <a href="#">
+          <img src="images/icons/footer-logo.svg" alt="logo">
+        </a>
+        <div class="flex-jsb-c gap-[56px]">
+          <a href="#" class="text-white">О сервисе</a>
+          <a href="#" class="text-white">Обратная связь</a>
+          <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+        </div>
+        <div class="flex-js-e gap-2">
+          <span class="text-white text-[40px]">007</span>
+          <span class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для абонентов Билайн и OQ</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-full mt-12 h-[1px] bg-white/30 hidden min-[1138px]:block"></div>
+    <div class="container py-8 hidden min-[1138px]:block">
+      <div class="flex-jsb-c">
+        <span class="text-[13px] text-[#FFF0E0] opacity-70">© 2024 Kettik. All rights reserved</span>
+        <div class="flex-jc-c gap-8">
+          <a href="#">
+            <img src="images/icons/fb.svg" alt="fb">
+          </a>
+          <a href="#">
+            <img src="images/icons/insta.svg" alt="insta">
+          </a>
+          <a href="#">
+            <img src="images/icons/Telegram.svg" alt="telegram">
+          </a>
+          <a href="#">
+            <img src="images/icons/youtube.svg" alt="youtube">
+          </a>
+        </div>
+        <div class="flex-je-c gap-[40px]">
+          <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+          <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="w-full h-[88px] border-t bg-white fixed bottom-0 left-0 flex-jc-c flex sm:hidden px-4">
+    <button class="w-full h-12 text-[18px] bg-[#3E3AFF] rounded-[12px] text-white px-6">
+      Забронировать
+    </button>
+  </div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
