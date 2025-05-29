@@ -87,37 +87,37 @@
   <div class="container min-[1191px]:!max-w-[calc(100%-64px)] grid-cols-4 gap-2 items-stretch mb-6 lg:mb-[100px] mt-8 relative hidden md:grid">
      <div class="row-span-2 col-span-2 relative group">
        <img src="images/order-page/hotesl.png" alt="hotel" class="w-full h-full object-cover rounded-[12px]">
-       <button class="view-image-header bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
+       <button class="bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
          Посмотреть
        </button>
      </div>
     <div class="row-span-1 col-span-1 relative group">
       <img src="images/order-page/hotel-2.png" alt="hotel" class="w-full h-full object-cover rounded-[12px]">
-      <button class="view-image-header bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
+      <button class="bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
         Посмотреть
       </button>
     </div>
     <div class="row-span-1 col-span-1 relative group">
       <img src="images/order-page/hotel-3.png" alt="hotel" class="w-full h-full object-cover rounded-[12px]">
-      <button class="view-image-header bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
+      <button class="bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
         Посмотреть
       </button>
     </div>
    <div class="row-span-1 col-span-1 relative group">
      <img src="images/order-page/hotel-4.png" alt="hotel" class="w-full h-full object-cover rounded-[12px]">
-     <button class="view-image-header bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
+     <button class="bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
        Посмотреть
      </button>
    </div>
     <div class="row-span-1 col-span-1 relative group">
       <img src="images/order-page/hotel-5.png" alt="hotel" class="w-full h-full object-cover rounded-[12px]">
-      <button class="view-image-header bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
+      <button class="bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px] transition opacity-0 group-hover:opacity-100 absolute bottom-4 left-4">
         Посмотреть
       </button>
     </div>
 
     <div class="absolute top-4 right-[109px] flex-jsb-c gap-2">
-      <button class="view-image-header bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px]">
+      <button class="bg-white shadow-share-btn rounded-[9px] border border-[#1201FF33] flex-jc-c gap-2 px-4 h-12 text-[14px]">
         <img src="images/icons/heard-purple.svg" alt="heard-purple">
         Избранное
       </button>
@@ -1975,167 +1975,81 @@
   </footer>
 
 
-  <div class="fixed top-0 left-0 w-full h-[100dvh] backdrop-blur-[4px] z-10 flex-jc-s pt-[100px] px-6 pb-6 hidden [&.active]:flex" id="modal-hotel">
-    <div class="max-w-[860px] w-full bg-white border rounded-[16px] border-[#1201FF33] relative p-1">
-      <button class="w-8 h-8 rounded-[12px] flex-jc-c border border-purple absolute top-[-10px] right-[-10px] bg-white z-10" id="close-modal-hotel">
+  <div class="fixed top-0 left-0 w-full h-[100dvh] backdrop-blur-[4px] z-10 flex-jc-s pt-[100px] px-6 pb-6 hidden [&.active]:block active" id="desktop-map">
+    <div class="w-full bg-white h-full border rounded-[16px] border-[#1201FF33] relative p-1">
+      <button class="w-8 h-8 rounded-[12px] flex-jc-c border border-purple absolute top-[-10px] right-[-10px] bg-white z-10" id="close-desktop-map">
         <i class="icon-close text-[23px] text-black/70"></i>
       </button>
 
-      <div class="w-full p-4">
-
-        <div>
-          <h3 class="text-[24px] font-bold">
-            Двухместный номер с 2 отдельными кроватями и балконом
-          </h3>
-        </div>
-
-        <div class="w-full border-b pb-3 flex-jsb-c gap-4 mt-6">
-          <div class="w-[50%]">
-            <div class="swiper swiper-modal relative w-full overflow-hidden rounded-[12px]">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="images/order-page/hotesl.png" alt="hotel" class="w-full object-cover h-[350px]">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/order-page/hotel-2.png" alt="hotel" class="w-full object-cover h-[350px]">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/order-page/hotel-3.png" alt="hotel" class="w-full object-cover h-[350px]">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/order-page/hotel-4.png" alt="hotel" class="w-full object-cover h-[350px]">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/order-page/hotel-5.png" alt="hotel" class="w-full object-cover h-[350px]">
-                </div>
-              </div>
-
-              <div class="swiper-button-prev border border-[#1201FF33]" id="modal-slider-prev"></div>
-              <div class="swiper-button-next border border-[#1201FF33]" id="modal-slider-next"></div>
-
-            </div>
-            <div class="swiper swiper-modal-thumbs relative w-full overflow-hidden mt-2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
-                  <img src="images/order-page/hotesl.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
-                </div>
-                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
-                  <img src="images/order-page/hotel-2.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
-                </div>
-                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
-                  <img src="images/order-page/hotel-3.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
-                </div>
-                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
-                  <img src="images/order-page/hotel-4.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
-                </div>
-                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
-                  <img src="images/order-page/hotel-5.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
-                </div>
-              </div>
-            </div>
+      <div class="w-full h-full flex-js-s">
+        <div class="w-full h-full flex-js-s relative overflow-hidden border-l border-purple-600">
+          <div style="position:relative;overflow:hidden;" class="w-full">
+            <iframe src="https://yandex.com/map-widget/v1/?ll=44.510596%2C40.181486&amp;z=13.55" width="100%" height="100%" style="position:relative;height: 100dvh"></iframe>
           </div>
 
-          <div class="w-[50%] relative">
-            <div class="w-full relative">
-              <div class="flex-js-c gap-2 w-full overflow-x-auto scroll-bottom-none">
-                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
-                  <img src="images/icons/Wii-Fi.svg" alt="Wii-Fi" width="24" height="25">
-                  Wi-fi
-                </button>
-                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
-                  <img src="images/icons/Restaurant.svg" alt="Restaurant" width="24" height="25">
-                  Ресторан
-                </button>
-                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
-                  <img src="images/icons/Lift.svg" alt="Lift" width="24" height="25">
-                  Лифт
-                </button>
-                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
-                  <img src="images/icons/Double-Bed.svg" alt="Double-Bed" width="24" height="25">
-                  Семейные номера
-                </button>
-                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
-                  <img src="images/icons/outline.svg" alt="outline" width="24" height="25">
-                  Уличная парковка
-                </button>
-              </div>
-              <div class="absolute top-0 right-0 w-8 h-full z-10 bg-gradient-to-r from-transparent to-white"></div>
-            </div>
+          <div class="w-full py-4 pr-[10px] absolute top-4 ">
+            <div class="w-full flex-js-s mt-4 ml-6 gap-6">
+              <div class="w-[428px] rounded-[12px] border-b border-[#E4E7FF] bg-white md:border px-2 pb-2 wrapper-shadow md-none-shadow p-1 flex-jsb-c mb-4 relative transition hover:bg-[#F0F2FF]">
+                <div class="w-full h-full flex-js-s gap-4 items-stretch">
+                  <div class="w-[109px] min-w-[109px] min-h-full overflow-hidden rounded-[12px] relative bg-red-600">
+                    <img src="images/search-result/hotel-1.png" alt="hotel-1" width="218" height="484" class="w-full min-hh-[260px] h-full object-cover">
+                    <span class="w-9 h-9 rounded-[5px] absolute top-3 left-3 bg-[#3E3AFF] flex-jc-c text-white text-[14px]">7.5</span>
+                  </div>
+                  <div class="w-full h-full">
+                    <h2 class="md:text-[24px] tracking-[-0.47px] font-bold">Гостиница Garden Plaza Bukhara</h2>
+                    <div class="flex-js-s gap-[1px]">
+                      <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                      <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                      <img src="images/icons/star.svg" alt="star icon" width="12" height="13">
+                    </div>
+                    <div class="flex-js-c gap-2 mt-1">
+                      <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Бухара</a>
+                      <a href="#" class="text-[#3E3AFF] text-[13px] tracking-[-0.04px] font-semibold hidden md:block">Показать
+                        на карте</a>
+                      <span class="text-[#71717A] text-[13px] tracking-[-0.04px]">1.9 км от центра</span>
+                    </div>
+                    <div class="mt-4">
+                      <button class="bg-[#1D9F18] text-white px-2 py-1 rounded-[3px] tracking-[0.01px] text-[12px]">
+                        Завтрак включен
+                      </button>
+                    </div>
+                    <div class="hidden md:flex-js-s gap-2 mt-4">
+                      <div class="w-6 min-w-6 min-h-6 h-6 rounded-[5px] bg-[#CDD3FF] text-[13px] flex-jc-c">
+                        1х
+                      </div>
+                      <div>
+                        <h4 class="text-[15px] tracking-[-0.13px]">Стандартный одноместный номер</h4>
+                        <ul class="mt-1">
+                          <li class="flex-js-c gap-2">
+                            <i class="icon-check text-[#1D9F18]"></i>
+                            <span class="text-[#1D9F18] tracking-[-0.04px] text-[13px]">
+                            Бесплатная отмена
+                          </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
 
-            <div class="w-[95%] h-[360px] overflow-y-auto overflow-x-hidden mt-4">
-              <div class="flex gap-2 text-[15px]">
-                <h3 class="font-bold text-[16px]">Площадь комнаты:</h3>
-                45м2
-              </div>
-              <p class="text-[15px] mt-4">
-                Двухместный номер с 1 кроватью и собственной ванной комнатой с безбарьерным душем, феном и бесплатными туалетно-косметическими принадлежностями. Из этого двухместного номера открывается вид на город. В распоряжении гостей 1 кровать.
-              </p>
-              <h3 class="font-bold mt-4">Ванная комната:</h3>
+                    <div class="w-full p-4 flex-je-e flex-col">
+                      <h3 class="text-[14px] font-bold block">1 номер в отеле</h3>
+                      <h3 class="text-[14px]">2 гостя, 1 ночь</h3>
+                      <h2 class="text-[18px] sm:text-[24px] font-bold tracking-[-0.47px]">USZ 1000 000</h2>
+                      <h3 class="text-[13px] tracking-[-0.04px] text-[#71717A] ">Включая налоги и сборы</h3>
+                      <button class="w-full bg-[#3E3AFF] rounded-[12px] text-white h-12 mt-3 hidden">Посмотреть
+                      </button>
+                    </div>
 
-              <ul class="list-disc ">
-                <li>Душевая кабина</li>
-                <li>Тапочки</li>
-                <li>Бесплатные туалетные принадлежности</li>
-                <li>Туалет</li>
-                <li>Полотенца</li>
-                <li>Фен</li>
-                <li>Туалетная бумага</li>
-                <li>Сушилка для рук</li>
-                <li>Зубная щетка</li>
-                <li>Шапочка для душа</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-full mt-6 flex-jsb-c">
-          <div>
-            <ul>
-              <li class="flex-js-c gap-2 text-[14px] mb-2">
-                <div class="flex-js-c min-w-[40px]">
-                  <img src="images/icons/user-black.svg" alt="user-black" width="12" height="12">
-                  <img src="images/icons/user-black.svg" alt="user-black" width="12" height="12">
-                </div>
-                Стандартный двухместный номер с 2 отдельными кроватями
-              </li>
-              <li class="flex-js-c gap-2 text-[14px] mb-2">
-                <div class="flex-js-c min-w-[40px]">
-                  <img src="images/icons/green-check-stroke.svg" alt="green-check" width="20">
-                </div>
-                Бронирование возможно без кредитной карты
-              </li>
-              <li class="flex-js-c gap-2 text-[14px] mb-2">
-                <div class="flex-js-c min-w-[40px]">
-                  <img src="images/icons/RAW-2.svg" alt="green-check" width="25">
-                </div>
-                Сказочный <span class="text-[#1D9F18]">завтрак</span> включен в стоимость
-              </li>
-              <li class="flex-js-c gap-2 text-[14px] mb-2">
-                <div class="flex-js-c min-w-[40px]">
-                  <img src="images/icons/green-check-stroke.svg" alt="green-check" width="20">
-                </div>
-                Бесплатная отмена
-              </li>
-              <li class="flex-js-c gap-2 text-[14px] mb-2">
-                <div class="flex-js-c min-w-[40px]">
-                  <div class="flex-js-s">
-                    <img src="images/icons/single-bed-black.svg" alt="single-bed-black" width="20" height="20">
-                    <sup class="text-[#71717A] mt-2">x2</sup>
                   </div>
                 </div>
-                Две раздельные кровати
-              </li>
-            </ul>
+              </div>
+              <label class="w-[370px] h-12 rounded-[12px] border bg-white flex-js-c pl-3 gap-2 overflow-hidden">
+                <i class="icon-search text-[22px] text-[#3E3AFF]"></i>
+                <input type="text" class="w-full h-full" placeholder="Искать на карте">
+              </label>
+            </div>
           </div>
 
-          <div class="w-[40%]">
-            <h4 class="text-[24px] mb-6 font-bold text-center">UZS 104 000 000</h4>
-            <button class="w-full h-12 text-[18px] bg-[#3E3AFF] rounded-[12px] text-white px-6">
-              Забронировать
-            </button>
-          </div>
         </div>
-
 
       </div>
 
