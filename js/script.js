@@ -6,6 +6,39 @@ function $el(target) {
   return document.querySelector(target);
 }
 
+
+
+const components = $('component');
+
+
+components.forEach(component => {
+  const src = component.getAttribute('src');
+
+  fetch(src).then(response => response.text()).then((text) => {
+    component.outerHTML = text;
+  })
+})
+
+
+
+const getDataFor = $('*[data-for]');
+
+
+getDataFor.forEach((item) => {
+  const getCount = item.dataset.for;
+
+  let html = '';
+
+  Array.from({length: +getCount}).forEach(() => {
+    html += item.outerHTML;
+  })
+
+  item.outerHTML = html;
+})
+
+
+
+
 AOS.init({
   duration: 1000
 })
