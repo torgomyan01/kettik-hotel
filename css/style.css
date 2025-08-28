@@ -658,6 +658,19 @@ input:focus {
   box-shadow: 4px 4px 0px 0px #A5ACFF;
 }
 
+.shadow-wrapper {
+  box-shadow: 0 0 0.5px 0 #0E02B0, 0 0.5px 2px 0 #A5ACFF;
+}
+
+.dropdown-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.filter-icon {
+  width: 20px;
+  height: 20px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

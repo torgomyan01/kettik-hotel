@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="fonts/style.css">
+
+  <link rel="stylesheet" href="css/output.css">
+
+  <script src="js/aos.js"></script>
+  <script src="js/nouislider.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <title>Kettik Hotel</title>
+</head>
+<body>
+
+
+<component src="./components/navbar.html"></component>
+
+<div class="mx-auto max-w-[1200px] py-8 mb-[100px] px-4">
+  <div class="grid gap-6 lg:grid-cols-[280px_1fr] items-start">
+    <component src="./components/left-menu.html"></component>
+
+    <div class="space-y-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="relative mb-4">
+          <!-- Dropdown Button -->
+          <button
+              id="sortingButton"
+              class="flex items-center gap-3 text-gray-800 font-medium text-lg hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:text-blue-600"
+              aria-haspopup="true"
+              aria-expanded="false"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 13.3333L5.83333 16.6667L9.16667 13.3333" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.83333 16.6667V3.33334" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.16666 3.33334H17.5" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.16666 6.66666H15" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.16666 10H12.5" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <span>Сортировка</span>
+          </button>
+
+          <div
+              id="dropdownMenu"
+              class="absolute top-10 left-0 w-80 from-purple-100 bg-white to-blue-100 rounded-2xl border border-purple-200 dropdown-shadow opacity-0 invisible transform scale-95 transition-all duration-200 ease-out z-50"
+              role="menu"
+              aria-labelledby="sortingButton"
+          >
+            <div class="p-2">
+              <button
+                  class="w-full text-left px-6 py-4 text-gray-700 hover:bg-[#F0F2FF] rounded-xl transition-all duration-150 ease-out hover:scale-[1.02] focus:outline-none focus:bg-white/50 focus:scale-[1.02]"
+                  role="menuitem"
+                  data-value="all"
+              >
+                <span class="text-base font-medium">Все отзывы</span>
+              </button>
+
+              <button
+                  class="w-full text-left px-6 py-4 text-gray-700 hover:bg-[#F0F2FF] rounded-xl transition-all duration-150 ease-out hover:scale-[1.02] focus:outline-none focus:bg-white/50 focus:scale-[1.02]"
+                  role="menuitem"
+                  data-value="no-review"
+              >
+                <span class="text-base font-medium">Без отзыва</span>
+              </button>
+
+              <button
+                  class="w-full text-left px-6 py-4 text-gray-700 hover:bg-[#F0F2FF] rounded-xl transition-all duration-150 ease-out hover:scale-[1.02] focus:outline-none focus:bg-white/50 focus:scale-[1.02]"
+                  role="menuitem"
+                  data-value="published"
+              >
+                <span class="text-base font-medium">Опубликованный</span>
+              </button>
+
+              <button
+                  class="w-full text-left px-6 py-4 text-gray-700 hover:bg-[#F0F2FF] rounded-xl transition-all duration-150 ease-out hover:scale-[1.02] focus:outline-none focus:bg-white/50 focus:scale-[1.02]"
+                  role="menuitem"
+                  data-value="moderation"
+              >
+                <span class="text-base font-medium">На модерации</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div data-for="4" class="bg-white rounded-[12px] border border-[#3E3AFF]/30 p-4 sm:p-6">
+            <div class="flex gap-4 flex-col md:flex-row">
+              <div class="flex gap-6">
+                <img src="images/placeholder.png"
+                     alt="Garden Plaza Bukhara"
+                     class="w-[80%] max-h-[400px] md:min-w-[144px] md:h-20 object-cover rounded-lg">
+
+                <div class="relative block md:hidden">
+                  <button onclick="toggleDropdown('dropdown6')" class="p-1 hover:bg-gray-100 rounded min-w-10">
+                    <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                          d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                    </svg>
+                  </button>
+                  <div id="dropdown6"
+                       class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-10">
+                    <button onclick="deleteBooking()"
+                            class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                      Удалить бронирование
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-1">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <div class="flex items-center gap-2 mb-2">
+                      <div
+                          class="flex items-center gap-1 text-custom-success text-sm bg-[#E4FBD2] px-4 py-2 rounded-[30px]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_148_15)">
+                            <path d="M3.33333 8L6.66666 11.3333L13.3333 4.66667" stroke="#1D9F18" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_148_15">
+                              <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+
+                        Отзыв опубликован
+                      </div>
+                    </div>
+                    <p class="text-gray-900 mb-1">
+                      Вы написали отзыв об объекте
+                      <a href="#" class="text-custom-primary hover:underline">Гостиница Garden Plaza Bukhara</a>
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-500 text-sm">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M5.33333 0.666656C5.70152 0.666656 6 0.965133 6 1.33332V1.99999L10 1.99999V1.33332C10 0.965133 10.2985 0.666656 10.6667 0.666656C11.0349 0.666656 11.3333 0.965133 11.3333 1.33332V2.00107C11.6503 2.00325 11.9273 2.0098 12.1679 2.02945C12.5426 2.06007 12.8871 2.12578 13.2106 2.29064C13.7124 2.5463 14.1204 2.95425 14.376 3.45602C14.5409 3.77957 14.6066 4.12404 14.6372 4.49877C14.6667 4.85957 14.6667 5.30247 14.6667 5.83911L14.6667 11.4942C14.6667 12.0308 14.6667 12.4737 14.6372 12.8345C14.6066 13.2093 14.5409 13.5537 14.376 13.8773C14.1204 14.3791 13.7124 14.787 13.2106 15.0427C12.8871 15.2075 12.5426 15.2732 12.1679 15.3039C11.8071 15.3333 11.3642 15.3333 10.8275 15.3333L5.17245 15.3333C4.63581 15.3333 4.1929 15.3333 3.83211 15.3039C3.45738 15.2732 3.11291 15.2075 2.78935 15.0427C2.28759 14.787 1.87964 14.3791 1.62398 13.8773C1.45912 13.5537 1.39341 13.2093 1.36279 12.8345C1.33331 12.4737 1.33332 12.0308 1.33333 11.4942L1.33333 5.83912C1.33332 5.30248 1.33331 4.85957 1.36279 4.49877C1.39341 4.12404 1.45912 3.77957 1.62398 3.45602C1.87964 2.95425 2.28759 2.5463 2.78935 2.29064C3.11291 2.12578 3.45738 2.06007 3.83211 2.02945C4.07265 2.0098 4.34969 2.00325 4.66666 2.00107V1.33332C4.66666 0.965133 4.96514 0.666656 5.33333 0.666656ZM4.66666 3.3345C4.36964 3.33658 4.13642 3.34237 3.94069 3.35836C3.64841 3.38224 3.49894 3.42552 3.39468 3.47865C3.14379 3.60648 2.93982 3.81045 2.81199 4.06134C2.75886 4.1656 2.71558 4.31507 2.6917 4.60735C2.66718 4.90741 2.66666 5.2956 2.66666 5.86666V5.99999L13.3333 5.99999V5.86666C13.3333 5.2956 13.3328 4.90741 13.3083 4.60735C13.2844 4.31507 13.2411 4.1656 13.188 4.06134C13.0602 3.81045 12.8562 3.60648 12.6053 3.47865C12.501 3.42552 12.3516 3.38224 12.0593 3.35836C11.8636 3.34237 11.6303 3.33658 11.3333 3.3345V3.99999C11.3333 4.36818 11.0349 4.66666 10.6667 4.66666C10.2985 4.66666 10 4.36818 10 3.99999V3.33332L6 3.33332V3.99999C6 4.36818 5.70152 4.66666 5.33333 4.66666C4.96514 4.66666 4.66666 4.36818 4.66666 3.99999V3.3345ZM13.3333 7.33332L2.66666 7.33332L2.66666 11.4667C2.66666 12.0377 2.66718 12.4259 2.6917 12.726C2.71558 13.0182 2.75886 13.1677 2.81199 13.272C2.93982 13.5229 3.14379 13.7268 3.39468 13.8547C3.49894 13.9078 3.64841 13.9511 3.94069 13.975C4.24075 13.9995 4.62894 14 5.2 14L10.8 14C11.371 14 11.7592 13.9995 12.0593 13.975C12.3516 13.9511 12.501 13.9078 12.6053 13.8547C12.8562 13.7268 13.0602 13.5229 13.188 13.272C13.2411 13.1677 13.2844 13.0182 13.3083 12.726C13.3328 12.4259 13.3333 12.0377 13.3333 11.4667L13.3333 7.33332Z"
+                              fill="#3E3AFF"/>
+                      </svg>
+
+                      10 авг 2025
+                    </div>
+                  </div>
+
+                  <div class="relative hidden md:block">
+                    <button onclick="toggleDropdown('dropdown1')" class="p-1 hover:bg-gray-100 rounded">
+                      <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                      </svg>
+                    </button>
+                    <div id="dropdown1"
+                         class="hidden absolute right-0 mt-2 w-48 bg-white rounded-[12px] border-[#3E3AFF]/30 shadow-lg border border-gray-200 z-10">
+                      <button onclick="deleteBooking()"
+                              class="block w-full text-left px-4 py-4 text-sm text-gray-700 hover:bg-gray-50">
+                        Удалить бронирование
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-gray-700 font-medium">Ваша оценка</span>
+                    <span class="text-lg font-semibold">9,0</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2 bg-[#E4E7FF]">
+                    <div class="bg-custom-primary h-2 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="flex gap-3">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="w-5 h-5  rounded-full flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_148_33)">
+                            <path
+                                d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 9.99999C18.3333 5.39762 14.6024 1.66666 10 1.66666C5.39763 1.66666 1.66667 5.39762 1.66667 9.99999C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+                                stroke="#1D9F18" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path
+                                d="M15 10.8333C14.8012 12.0104 14.1878 13.0774 13.2708 13.8416C12.3537 14.6058 11.1936 15.0167 10 15C8.80642 15.0167 7.64625 14.6058 6.72923 13.8416C5.8122 13.0774 5.19883 12.0104 5 10.8333H15Z"
+                                stroke="#1D9F18" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.5 7.5H7.50833" stroke="#1D9F18" stroke-width="1.67" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M12.5 7.5H12.5083" stroke="#1D9F18" stroke-width="1.67" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_148_33">
+                              <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+
+                      </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                      Чистая постель и полотенце. В номере : Телевизор, стол, тумба, 2 чашки (2 пакетика чая и сахар за
+                      это отдельное спасибо), 2 кровати и сушка для одежды, зеркало. Для 1 ночи отличное место, но не
+                      более, поскольку комната небольшая и негде разложить вещи. Есть кухня, можно разогреть в
+                      микроволновой еду.
+                    </p>
+                  </div>
+
+                  <div class="flex gap-3">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="w-5 h-5 rounded-full flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_148_41)">
+                            <path
+                                d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 9.99999C18.3333 5.39762 14.6024 1.66666 10 1.66666C5.39763 1.66666 1.66667 5.39762 1.66667 9.99999C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+                                stroke="#DD2818" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path
+                                d="M13.3333 13.3333C13.3333 13.3333 12.0833 11.6667 10 11.6667C7.91667 11.6667 6.66667 13.3333 6.66667 13.3333"
+                                stroke="#DD2818" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.5 7.5H7.50833" stroke="#DD2818" stroke-width="1.67" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M12.5 7.5H12.5083" stroke="#DD2818" stroke-width="1.67" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_148_41">
+                              <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+
+                      </div>
+                    </div>
+                    <p class="text-gray-700 text-sm">
+                      Плохой сигнал вайфая. Но работал
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<section
+    class="contact-section w-full md:h-[480px] mt-[-100px] pt-[130px] md:pt-[110px] rounded-[32px] pb-12 bg-white">
+  <div class="container h-full">
+    <div class="w-full flex-jsb-c h-full gap-6 flex-col md:flex-row">
+      <div class="w-full flex-js-c gap-6">
+        <h4 class="md:text-[20px] md:font-bold text-[#27272A] w-full md:w-[161px] md:mb-[22px] order-2 md:order-1">
+          Ваш агент всегда на связи
+        </h4>
+        <a href="#" class="order-1 md:order-2">
+          <img src="images/icons/tg.svg" alt="tg" width="105" height="105"
+               class="w-[42px] md:w-[105px] h-[42px] md:h-[105px]">
+        </a>
+      </div>
+      <div class="w-full">
+        <h4 class="md:text-[20px] font-bold text-[#27272A] mb-[22px]">Укажите удобное время для звонка </h4>
+        <div class="w-full flex-jsb-c gap-3 flex-col md:flex-row">
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+            <img src="images/icons/user.svg" alt="icon user" width="20" height="20">
+            <input type="text" placeholder="Имя" class="placeholder:text-[#71717A] w-full">
+          </label>
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+            <img src="images/icons/call.svg" alt="" width="20" height="20">
+            <input type="text" placeholder="Номер телефона" class="placeholder:text-[#71717A] w-full">
+          </label>
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-jsb-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px] cursor-pointer">
+            <span>СР, 12:15 </span>
+            <img src="images/icons/suffix-time.svg" alt="suffix-time" width="20" height="20">
+          </label>
+        </div>
+        <div class="mt-6 w-full">
+          <button class="w-full md:w-[287px] h-12 rounded-[12px] bg-[#00D9FF] hover:bg-[#00D9F3] text-[#0D607D]">
+            Отправить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="w-full bg-[#0E00D6] mt-[-50px] z-[-100] relative">
+  <div class="container pt-[100px] block min-[1138px]:hidden">
+    <div class="flex-jc-c">
+      <a href="#">
+        <img src="images/icons/footer-logo.svg" alt="logo">
+      </a>
+    </div>
+    <div class="flex-jsb-s gap-4 mt-6">
+      <div class="flex-js-s gap-6 flex-col">
+        <a href="#" class="text-white">О сервисе</a>
+        <a href="#" class="text-white">Обратная связь</a>
+        <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+        <div class="flex-js-e gap-2">
+          <span class="text-white text-[40px]">007</span>
+          <span
+              class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для <br> абонентов Билайн и OQ</span>
+        </div>
+      </div>
+      <div class="flex-js-c gap-8 flex-col">
+        <a href="#">
+          <img src="images/icons/fb.svg" alt="fb">
+        </a>
+        <a href="#">
+          <img src="images/icons/insta.svg" alt="insta">
+        </a>
+        <a href="#">
+          <img src="images/icons/Telegram.svg" alt="telegram">
+        </a>
+        <a href="#">
+          <img src="images/icons/youtube.svg" alt="youtube">
+        </a>
+      </div>
+    </div>
+    <div class="flex-jsb-c mt-6">
+      <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+      <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+    </div>
+    <div class="w-full mt-4 h-[1px] bg-white/30"></div>
+    <div class="mt-4 text-center text-[#FFF0E0] pb-6 tracking-[-0.18px] opacity-70">
+      © 2024 Kettik. All rights reserved
+    </div>
+  </div>
+  <div class="container pt-[100px] hidden min-[1138px]:block">
+    <div class="flex-jsb-c">
+      <a href="#">
+        <img src="images/icons/footer-logo.svg" alt="logo">
+      </a>
+      <div class="flex-jsb-c gap-[56px]">
+        <a href="#" class="text-white">О сервисе</a>
+        <a href="#" class="text-white">Обратная связь</a>
+        <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+      </div>
+      <div class="flex-js-e gap-2">
+        <span class="text-white text-[40px]">007</span>
+        <span class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для абонентов Билайн и OQ</span>
+      </div>
+    </div>
+  </div>
+  <div class="w-full mt-12 h-[1px] bg-white/30 hidden min-[1138px]:block"></div>
+  <div class="container py-8 hidden min-[1138px]:block">
+    <div class="flex-jsb-c">
+      <span class="text-[13px] text-[#FFF0E0] opacity-70">© 2024 Kettik. All rights reserved</span>
+      <div class="flex-jc-c gap-8">
+        <a href="#">
+          <img src="images/icons/fb.svg" alt="fb">
+        </a>
+        <a href="#">
+          <img src="images/icons/insta.svg" alt="insta">
+        </a>
+        <a href="#">
+          <img src="images/icons/Telegram.svg" alt="telegram">
+        </a>
+        <a href="#">
+          <img src="images/icons/youtube.svg" alt="youtube">
+        </a>
+      </div>
+      <div class="flex-je-c gap-[40px]">
+        <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+        <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  function toggleDropdown(dropdownId) {
+    // Close all other dropdowns
+    const allDropdowns = document.querySelectorAll('[id^="dropdown"]');
+    allDropdowns.forEach(dropdown => {
+      if (dropdown.id !== dropdownId) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+    // Toggle the clicked dropdown
+    const dropdown = document.getElementById(dropdownId);
+    dropdown.classList.toggle('hidden');
+  }
+
+  function deleteBooking() {
+    if (confirm('Вы уверены, что хотите удалить бронирование?')) {
+      alert('Бронирование удалено');
+      // Close dropdown
+      document.querySelectorAll('[id^="dropdown"]').forEach(dropdown => {
+        dropdown.classList.add('hidden');
+      });
+    }
+  }
+
+  function editReview() {
+    alert('Открыть редактор отзыва');
+    // Close dropdown
+    document.querySelectorAll('[id^="dropdown"]').forEach(dropdown => {
+      dropdown.classList.add('hidden');
+    });
+  }
+
+  function rateStay() {
+    alert('Открыть форму оценки пребывания');
+  }
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function (event) {
+    const dropdowns = document.querySelectorAll('[id^="dropdown"]');
+    const buttons = document.querySelectorAll('button[onclick^="toggleDropdown"]');
+
+    let clickedButton = false;
+    buttons.forEach(button => {
+      if (button.contains(event.target)) {
+        clickedButton = true;
+      }
+    });
+
+    if (!clickedButton) {
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.add('hidden');
+      });
+    }
+  });
+
+  class SortingDropdown {
+    constructor() {
+      this.button = document.getElementById('sortingButton');
+      this.menu = document.getElementById('dropdownMenu');
+      this.selectedFilter = document.getElementById('selectedFilter');
+      this.menuItems = this.menu.querySelectorAll('[role="menuitem"]');
+      this.isOpen = false;
+      this.currentSelection = 'all';
+
+      this.init();
+    }
+
+    init() {
+      // Button click handler
+      this.button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggle();
+      });
+
+      // Menu item click handlers
+      this.menuItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.selectItem(item);
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!this.button.contains(e.target) && !this.menu.contains(e.target)) {
+          this.close();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (this.isOpen) {
+          this.handleKeydown(e);
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && this.isOpen) {
+          this.close();
+          this.button.focus();
+        }
+      });
+    }
+
+    toggle() {
+      if (this.isOpen) {
+        this.close();
+      } else {
+        this.open();
+      }
+    }
+
+    open() {
+      this.isOpen = true;
+      this.button.setAttribute('aria-expanded', 'true');
+
+      // Show dropdown with animation
+      this.menu.classList.remove('opacity-0', 'invisible', 'scale-95');
+      this.menu.classList.add('opacity-100', 'visible', 'scale-100');
+
+      // Focus first menu item
+      this.menuItems[0].focus();
+    }
+
+    close() {
+      this.isOpen = false;
+      this.button.setAttribute('aria-expanded', 'false');
+
+      // Hide dropdown with animation
+      this.menu.classList.remove('opacity-100', 'visible', 'scale-100');
+      this.menu.classList.add('opacity-0', 'invisible', 'scale-95');
+    }
+
+    selectItem(item) {
+      const value = item.getAttribute('data-value');
+      const text = item.querySelector('span').textContent;
+
+      this.currentSelection = value;
+      this.selectedFilter.textContent = text;
+
+      // Dispatch custom event
+      const event = new CustomEvent('sortingChanged', {
+        detail: {value, text}
+      });
+      document.dispatchEvent(event);
+
+      this.close();
+      this.button.focus();
+    }
+
+    handleKeydown(e) {
+      const focusedElement = document.activeElement;
+      const currentIndex = Array.from(this.menuItems).indexOf(focusedElement);
+
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          const nextIndex = currentIndex < this.menuItems.length - 1 ? currentIndex + 1 : 0;
+          this.menuItems[nextIndex].focus();
+          break;
+
+        case 'ArrowUp':
+          e.preventDefault();
+          const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.menuItems.length - 1;
+          this.menuItems[prevIndex].focus();
+          break;
+
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          if (focusedElement && focusedElement.getAttribute('role') === 'menuitem') {
+            this.selectItem(focusedElement);
+          }
+          break;
+      }
+    }
+  }
+
+  // Initialize dropdown when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdown = new SortingDropdown();
+
+    // Listen for sorting changes
+    document.addEventListener('sortingChanged', (e) => {
+      console.log('Sorting changed to:', e.detail);
+    });
+  });
+
+</script>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

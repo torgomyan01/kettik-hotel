@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="fonts/style.css">
+
+  <link rel="stylesheet" href="css/output.css">
+
+  <script src="js/aos.js"></script>
+  <script src="js/nouislider.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <title>Kettik Hotel</title>
+</head>
+<body>
+
+
+<component src="./components/navbar.html"></component>
+
+<div class="mx-auto max-w-[1200px] py-8 mb-[100px]">
+  <h1 class="text-[40px] leading-none sm:text-5xl font-medium mb-8">Отели: избранное</h1>
+
+  <div class="grid gap-6 lg:grid-cols-[280px_1fr] items-start">
+    <component src="./components/left-menu.html"></component>
+
+    <div class="space-y-6">
+      <h3 class="text-[30px] font-medium mb-4">Бухара</h3>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div data-for="2" class="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+            <div class="relative">
+              <img src="images/placeholder.png"
+                   alt="Reikartz Bahor Hotel"
+                   class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-[1.05]">
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 transform group-hover:scale-[1.05]"></div>
+              <div class="absolute top-4 left-4 bg-[#3e3aff] text-white px-3 py-1 rounded-lg font-semibold z-10">
+                10
+              </div>
+              <button class="absolute top-4 right-4 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 hover:bg-gray-50 z-10">
+                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+
+              <!-- Enhanced check price button with better hover animations -->
+              <div class="absolute inset-x-0 bottom-4 px-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-10">
+                <button class="w-full bg-white text-[#27272a] py-3 px-4 rounded-xl font-medium shadow-lg hover:shadow-xl hover:bg-[#3e3aff] hover:text-white transition-all duration-200">
+                  Проверить цену и наличие
+                </button>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-[#27272a] mb-2">Гостиница Reikartz Bahor Bukhara</h3>
+              <p class="text-[#71717a] text-sm">ул. Бахауддин Накшбан д.354, Бухара</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section
+    class="contact-section w-full md:h-[480px] mt-[-100px] pt-[130px] md:pt-[110px] rounded-[32px] pb-12 bg-white">
+  <div class="container h-full">
+    <div class="w-full flex-jsb-c h-full gap-6 flex-col md:flex-row">
+      <div class="w-full flex-js-c gap-6">
+        <h4 class="md:text-[20px] md:font-bold text-[#27272A] w-full md:w-[161px] md:mb-[22px] order-2 md:order-1">
+          Ваш агент всегда на связи
+        </h4>
+        <a href="#" class="order-1 md:order-2">
+          <img src="images/icons/tg.svg" alt="tg" width="105" height="105"
+               class="w-[42px] md:w-[105px] h-[42px] md:h-[105px]">
+        </a>
+      </div>
+      <div class="w-full">
+        <h4 class="md:text-[20px] font-bold text-[#27272A] mb-[22px]">Укажите удобное время для звонка </h4>
+        <div class="w-full flex-jsb-c gap-3 flex-col md:flex-row">
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+            <img src="images/icons/user.svg" alt="icon user" width="20" height="20">
+            <input type="text" placeholder="Имя" class="placeholder:text-[#71717A] w-full">
+          </label>
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+            <img src="images/icons/call.svg" alt="" width="20" height="20">
+            <input type="text" placeholder="Номер телефона" class="placeholder:text-[#71717A] w-full">
+          </label>
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-jsb-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px] cursor-pointer">
+            <span>СР, 12:15 </span>
+            <img src="images/icons/suffix-time.svg" alt="suffix-time" width="20" height="20">
+          </label>
+        </div>
+        <div class="mt-6 w-full">
+          <button class="w-full md:w-[287px] h-12 rounded-[12px] bg-[#00D9FF] hover:bg-[#00D9F3] text-[#0D607D]">
+            Отправить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="w-full bg-[#0E00D6] mt-[-50px] z-[-100] relative">
+  <div class="container pt-[100px] block min-[1138px]:hidden">
+    <div class="flex-jc-c">
+      <a href="#">
+        <img src="images/icons/footer-logo.svg" alt="logo">
+      </a>
+    </div>
+    <div class="flex-jsb-s gap-4 mt-6">
+      <div class="flex-js-s gap-6 flex-col">
+        <a href="#" class="text-white">О сервисе</a>
+        <a href="#" class="text-white">Обратная связь</a>
+        <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+        <div class="flex-js-e gap-2">
+          <span class="text-white text-[40px]">007</span>
+          <span
+              class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для <br> абонентов Билайн и OQ</span>
+        </div>
+      </div>
+      <div class="flex-js-c gap-8 flex-col">
+        <a href="#">
+          <img src="images/icons/fb.svg" alt="fb">
+        </a>
+        <a href="#">
+          <img src="images/icons/insta.svg" alt="insta">
+        </a>
+        <a href="#">
+          <img src="images/icons/Telegram.svg" alt="telegram">
+        </a>
+        <a href="#">
+          <img src="images/icons/youtube.svg" alt="youtube">
+        </a>
+      </div>
+    </div>
+    <div class="flex-jsb-c mt-6">
+      <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+      <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+    </div>
+    <div class="w-full mt-4 h-[1px] bg-white/30"></div>
+    <div class="mt-4 text-center text-[#FFF0E0] pb-6 tracking-[-0.18px] opacity-70">
+      © 2024 Kettik. All rights reserved
+    </div>
+  </div>
+  <div class="container pt-[100px] hidden min-[1138px]:block">
+    <div class="flex-jsb-c">
+      <a href="#">
+        <img src="images/icons/footer-logo.svg" alt="logo">
+      </a>
+      <div class="flex-jsb-c gap-[56px]">
+        <a href="#" class="text-white">О сервисе</a>
+        <a href="#" class="text-white">Обратная связь</a>
+        <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+      </div>
+      <div class="flex-js-e gap-2">
+        <span class="text-white text-[40px]">007</span>
+        <span class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для абонентов Билайн и OQ</span>
+      </div>
+    </div>
+  </div>
+  <div class="w-full mt-12 h-[1px] bg-white/30 hidden min-[1138px]:block"></div>
+  <div class="container py-8 hidden min-[1138px]:block">
+    <div class="flex-jsb-c">
+      <span class="text-[13px] text-[#FFF0E0] opacity-70">© 2024 Kettik. All rights reserved</span>
+      <div class="flex-jc-c gap-8">
+        <a href="#">
+          <img src="images/icons/fb.svg" alt="fb">
+        </a>
+        <a href="#">
+          <img src="images/icons/insta.svg" alt="insta">
+        </a>
+        <a href="#">
+          <img src="images/icons/Telegram.svg" alt="telegram">
+        </a>
+        <a href="#">
+          <img src="images/icons/youtube.svg" alt="youtube">
+        </a>
+      </div>
+      <div class="flex-je-c gap-[40px]">
+        <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+        <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div
+    class="fixed top-0 left-0 w-full h-[100dvh] backdrop-blur-[4px] z-10 flex-jc-s pt-[100px] px-6 pb-6 hidden [&.active]:flex"
+    id="modal-hotel">
+  <div class="max-w-[860px] w-full bg-white border rounded-[16px] border-[#1201FF33] relative p-1">
+    <button
+        class="w-8 h-8 rounded-[12px] flex-jc-c border border-purple absolute top-[-10px] right-[-10px] bg-white z-10"
+        id="close-modal-hotel">
+      <i class="icon-close text-[23px] text-black/70"></i>
+    </button>
+
+    <div class="w-full p-4">
+
+      <div>
+        <h3 class="text-[24px] font-bold">
+          Двухместный номер с 2 отдельными кроватями и балконом
+        </h3>
+      </div>
+
+      <div class="w-full border-b pb-3 flex-jsb-c gap-4 mt-6">
+        <div class="w-[50%]">
+          <div class="swiper swiper-modal relative w-full overflow-hidden rounded-[12px]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/order-page/hotesl.png" alt="hotel" class="w-full object-cover h-[350px]">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/order-page/hotel-2.png" alt="hotel" class="w-full object-cover h-[350px]">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/order-page/hotel-3.png" alt="hotel" class="w-full object-cover h-[350px]">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/order-page/hotel-4.png" alt="hotel" class="w-full object-cover h-[350px]">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/order-page/hotel-5.png" alt="hotel" class="w-full object-cover h-[350px]">
+              </div>
+            </div>
+
+            <div class="swiper-button-prev border border-[#1201FF33]" id="modal-slider-prev"></div>
+            <div class="swiper-button-next border border-[#1201FF33]" id="modal-slider-next"></div>
+
+          </div>
+          <div class="swiper swiper-modal-thumbs relative w-full overflow-hidden mt-2">
+            <div class="swiper-wrapper">
+              <div
+                  class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                <img src="images/order-page/hotesl.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+              </div>
+              <div
+                  class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                <img src="images/order-page/hotel-2.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+              </div>
+              <div
+                  class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                <img src="images/order-page/hotel-3.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+              </div>
+              <div
+                  class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                <img src="images/order-page/hotel-4.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+              </div>
+              <div
+                  class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                <img src="images/order-page/hotel-5.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[50%] relative">
+          <div class="w-full relative">
+            <div class="flex-js-c gap-2 w-full overflow-x-auto scroll-bottom-none">
+              <button
+                  class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                <img src="images/icons/Wii-Fi.svg" alt="Wii-Fi" width="24" height="25">
+                Wi-fi
+              </button>
+              <button
+                  class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                <img src="images/icons/Restaurant.svg" alt="Restaurant" width="24" height="25">
+                Ресторан
+              </button>
+              <button
+                  class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                <img src="images/icons/Lift.svg" alt="Lift" width="24" height="25">
+                Лифт
+              </button>
+              <button
+                  class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                <img src="images/icons/Double-Bed.svg" alt="Double-Bed" width="24" height="25">
+                Семейные номера
+              </button>
+              <button
+                  class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                <img src="images/icons/outline.svg" alt="outline" width="24" height="25">
+                Уличная парковка
+              </button>
+            </div>
+            <div class="absolute top-0 right-0 w-8 h-full z-10 bg-gradient-to-r from-transparent to-white"></div>
+          </div>
+
+          <div class="w-[95%] h-[360px] overflow-y-auto overflow-x-hidden mt-4">
+            <div class="flex gap-2 text-[15px]">
+              <h3 class="font-bold text-[16px]">Площадь комнаты:</h3>
+              45м2
+            </div>
+            <p class="text-[15px] mt-4">
+              Двухместный номер с 1 кроватью и собственной ванной комнатой с безбарьерным душем, феном и бесплатными
+              туалетно-косметическими принадлежностями. Из этого двухместного номера открывается вид на город. В
+              распоряжении гостей 1 кровать.
+            </p>
+            <h3 class="font-bold mt-4">Ванная комната:</h3>
+
+            <ul class="list-disc ">
+              <li>Душевая кабина</li>
+              <li>Тапочки</li>
+              <li>Бесплатные туалетные принадлежности</li>
+              <li>Туалет</li>
+              <li>Полотенца</li>
+              <li>Фен</li>
+              <li>Туалетная бумага</li>
+              <li>Сушилка для рук</li>
+              <li>Зубная щетка</li>
+              <li>Шапочка для душа</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full mt-6 flex-jsb-c">
+        <div>
+          <ul>
+            <li class="flex-js-c gap-2 text-[14px] mb-2">
+              <div class="flex-js-c min-w-[40px]">
+                <img src="images/icons/user-black.svg" alt="user-black" width="12" height="12">
+                <img src="images/icons/user-black.svg" alt="user-black" width="12" height="12">
+              </div>
+              Стандартный двухместный номер с 2 отдельными кроватями
+            </li>
+            <li class="flex-js-c gap-2 text-[14px] mb-2">
+              <div class="flex-js-c min-w-[40px]">
+                <img src="images/icons/green-check-stroke.svg" alt="green-check" width="20">
+              </div>
+              Бронирование возможно без кредитной карты
+            </li>
+            <li class="flex-js-c gap-2 text-[14px] mb-2">
+              <div class="flex-js-c min-w-[40px]">
+                <img src="images/icons/RAW-2.svg" alt="green-check" width="25">
+              </div>
+              Сказочный <span class="text-[#1D9F18]">завтрак</span> включен в стоимость
+            </li>
+            <li class="flex-js-c gap-2 text-[14px] mb-2">
+              <div class="flex-js-c min-w-[40px]">
+                <img src="images/icons/green-check-stroke.svg" alt="green-check" width="20">
+              </div>
+              Бесплатная отмена
+            </li>
+            <li class="flex-js-c gap-2 text-[14px] mb-2">
+              <div class="flex-js-c min-w-[40px]">
+                <div class="flex-js-s">
+                  <img src="images/icons/single-bed-black.svg" alt="single-bed-black" width="20" height="20">
+                  <sup class="text-[#71717A] mt-2">x2</sup>
+                </div>
+              </div>
+              Две раздельные кровати
+            </li>
+          </ul>
+        </div>
+
+        <div class="w-[40%]">
+          <h4 class="text-[24px] mb-6 font-bold text-center">UZS 104 000 000</h4>
+          <button class="w-full h-12 text-[18px] bg-[#3E3AFF] rounded-[12px] text-white px-6">
+            Забронировать
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
