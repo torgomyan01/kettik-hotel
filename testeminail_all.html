@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="fonts/style.css">
+
+  <link rel="stylesheet" href="css/output.css">
+
+  <script src="js/aos.js"></script>
+  <script src="js/nouislider.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <title>Kettik Hotel</title>
+</head>
+
+<body class="overflow-hidden">
+
+
+<component src="./components/navbar.html"></component>
+
+<div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 py-8 mb-[100px]">
+  <h1 class=" leading-none text-[24px] sm:text-[32px] md:text-5xl font-medium mb-8 ">Отели: бронирования</h1>
+
+  <div class="grid gap-6 grid-cols-1 lg:grid-cols-[280px_1fr] items-start">
+    <aside class="rounded-2xl border border-indigo-200/60 bg-white p-2 hidden lg:block ">
+      <nav class="flex  flex-col     ">
+        <div class="rounded-xl overflow-hidden border border-transparent">
+          <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 mb-1 bg-indigo-50">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M12.22 2H11.78C11.2496 2 10.7409 2.21071 10.3658 2.58579C9.99072 2.96086 9.78 3.46957 9.78 4V4.18C9.77964 4.53073 9.68706 4.87519 9.51154 5.17884C9.33602 5.48248 9.08374 5.73464 8.78 5.91L8.35 6.16C8.04596 6.33554 7.70108 6.42795 7.35 6.42795C6.99893 6.42795 6.65404 6.33554 6.35 6.16L6.2 6.08C5.74107 5.81526 5.19584 5.74344 4.684 5.88031C4.17217 6.01717 3.73555 6.35154 3.47 6.81L3.25 7.19C2.98526 7.64893 2.91345 8.19416 3.05031 8.706C3.18717 9.21783 3.52154 9.65445 3.98 9.92L4.13 10.02C4.43228 10.1945 4.68362 10.4451 4.85905 10.7468C5.03448 11.0486 5.1279 11.391 5.13 11.74V12.25C5.1314 12.6024 5.03965 12.949 4.86405 13.2545C4.68844 13.5601 4.43521 13.8138 4.13 13.99L3.98 14.08C3.52154 14.3456 3.18717 14.7822 3.05031 15.294C2.91345 15.8058 2.98526 16.3511 3.25 16.81L3.47 17.19C3.73555 17.6485 4.17217 17.9828 4.684 18.1197C5.19584 18.2566 5.74107 18.1847 6.2 17.92L6.35 17.84C6.65404 17.6645 6.99893 17.5721 7.35 17.5721C7.70108 17.5721 8.04596 17.6645 8.35 17.84L8.78 18.09C9.08374 18.2654 9.33602 18.5175 9.51154 18.8212C9.68706 19.1248 9.77964 19.4693 9.78 19.82V20C9.78 20.5304 9.99072 21.0391 10.3658 21.4142C10.7409 21.7893 11.2496 22 11.78 22H12.22C12.7504 22 13.2591 21.7893 13.6342 21.4142C14.0093 21.0391 14.22 20.5304 14.22 20V19.82C14.2204 19.4693 14.3129 19.1248 14.4885 18.8212C14.664 18.5175 14.9163 18.2654 15.22 18.09L15.65 17.84C15.954 17.6645 16.2989 17.5721 16.65 17.5721C17.0011 17.5721 17.346 17.6645 17.65 17.84L17.8 17.92C18.2589 18.1847 18.8042 18.2566 19.316 18.1197C19.8278 17.9828 20.2645 17.6485 20.53 17.19L20.75 16.8C21.0147 16.3411 21.0866 15.7958 20.9497 15.284C20.8128 14.7722 20.4785 14.3356 20.02 14.07L19.87 13.99C19.5648 13.8138 19.3116 13.5601 19.136 13.2545C18.9604 12.949 18.8686 12.6024 18.87 12.25V11.75C18.8686 11.3976 18.9604 11.051 19.136 10.7455C19.3116 10.4399 19.5648 10.1862 19.87 10.01L20.02 9.92C20.4785 9.65445 20.8128 9.21783 20.9497 8.706C21.0866 8.19416 21.0147 7.64893 20.75 7.19L20.53 6.81C20.2645 6.35154 19.8278 6.01717 19.316 5.88031C18.8042 5.74344 18.2589 5.81526 17.8 6.08L17.65 6.16C17.346 6.33554 17.0011 6.42795 16.65 6.42795C16.2989 6.42795 15.954 6.33554 15.65 6.16L15.22 5.91C14.9163 5.73464 14.664 5.48248 14.4885 5.17884C14.3129 4.87519 14.2204 4.53073 14.22 4.18V4C14.22 3.46957 14.0093 2.96086 13.6342 2.58579C13.2591 2.21071 12.7504 2 12.22 2Z"
+                  stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                  d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                  stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <span class="text-sm font-medium">Настройки профиля</span>
+          </a>
+
+          <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl">
+            <div class="flex items-center gap-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3_32)">
+                  <path
+                      d="M16 10H20C20.5304 10 21.0391 10.2107 21.4142 10.5858C21.7893 10.9609 22 11.4696 22 12C22 12.5304 21.7893 13.0391 21.4142 13.4142C21.0391 13.7893 20.5304 14 20 14H16L12 21H9L11 14H7L5 16H2L4 12L2 8H5L7 10H11L9 3H12L16 10Z"
+                      stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_3_32">
+                    <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              Авиабилеты
+            </div>
+          </a>
+          <a href="#"
+             class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Заказы</a>
+          <a href="#"
+             class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Пассажиры</a>
+        </div>
+
+        <div class="my-4 h-px bg-gray-200"></div>
+
+        <!-- Group 2 -->
+        <div class="rounded-xl overflow-hidden border border-transparent">
+          <a href="#" class="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 rounded-xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M18 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2Z"
+                  stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 16L9.348 15.76C10.813 14.747 13.188 14.747 14.652 15.76L15 16" stroke="#3E3AFF"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 7H8.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 7H16.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+              <path d="M12 7H12.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+              <path d="M12 11H12.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+              <path d="M16 11H16.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+              <path d="M8 11H8.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 22V15.5M14 15.5V22" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            Отели
+          </a>
+          <a href="#"
+             class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Бронирования</a>
+          <a href="#"
+             class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Избранное</a>
+          <a href="#"
+             class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Отзывы</a>
+          <a href="#"
+             class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Сообщения</a>
+        </div>
+
+        <div class="my-4 h-px bg-gray-200"></div>
+
+        <a href="#" class="flex items-center gap-3 px-4 py-3 text-sm text-indigo-600 hover:bg-indigo-50 rounded-xl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3_168)">
+              <path
+                  d="M18 18C14.6863 21.3137 9.31371 21.3137 6 18C2.68629 14.6863 2.68629 9.31371 6 6C9.31371 2.68629 14.6863 2.68629 18 6"
+                  stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 12L22.1823 12" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round"/>
+              <path
+                  d="M19.6367 15.2598L22.6367 12.2598C22.8024 12.0941 22.8024 11.8255 22.6367 11.6598L19.6367 8.65977"
+                  stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_3_168">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+
+          Выйти из аккаунта
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <div class="space-y-6">
+
+
+      <h2 class="text-[30px] font-semibold ">Предстоящие </h2>
+
+      <section data-for="2" class="rounded-2xl border border-indigo-200/60 bg-white p-4 md:p-6">
+        <div class="">
+          <!-- Left column -->
+          <div class="space-y-5 w-full ">
+            <div class="flex justify-between items-start w-full gap-6 flex-col md:flex-row">
+              <img src="images/image 82.png" alt="" class="rounded-[12px] w-full sm:w-auto">
+              <div class="w-full ">
+                <div class="flex-jsb-c gap-4">
+                  <div
+                      class="justify-center items-center h-[32px] rounded-[32px] bg-[#E4FBD2] gap-2 px-3 hidden sm:flex">
+                    <img src="images/System.svg" alt="">
+                    <span
+                        class=" text-[12px] font-normal text-[#1D9F18]  hidden min-[375px]:block ">Забронировано&nbsp;</span>
+                  </div>
+
+                  <div class=" flex justify-center items-center  ">
+                    <p class="text-[16px] font-semibold  ">USZ 9 000 000 000 </p>
+                    <i class="fa-solid fa-ellipsis-vertical text-[#3E3AFF]  ml-6 "></i>
+                  </div>
+                </div>
+
+
+                <div class=" flex justify-start items-center gap-2  pt-3 ">
+                  <p class="text-[16px] font-semibold  ">Гостиница Garden Plaza Bukhara </p>
+                  <div class=" min-w-[2px] h-[16px] bg-[#71717A] "></div>
+                  <p class="text-[12px] font-normal text-[#27272A]  ">Бухара</p>
+                </div>
+                <div class="text-[12px] mt-2">Номер подтверждения: <b class="text-[#3E3AFF]">949077074</b></div>
+                <div class=" flex justify-start items-center">
+                  <p class="text-[12px] font-bold py-3 "><span class="text-[#71717A]">Заезд</span> пн 12 мая 2025
+                    <span class="px-[4px] text-[#71717A] ">|</span> <span class="text-[#71717A]">Отъезд</span> вт 27
+                    мая 2025</p>
+                </div>
+                <div class="flex justify-start items-center gap-2 flex-col min-[477px]:flex-row">
+                  <button
+                      class="h-[48px] gap-2  text-[15px] justify-center items-center flex rounded-xl bg-[#CDD3FF] px-6 text-[#010078] w-full min-[477px]:w-auto">
+                    Сведения
+                    о бронировании
+                  </button>
+                  <button
+                      class="h-[48px] gap-2  text-[15px] justify-center items-center flex rounded-xl bg-[#3E3AFF] hover:bg-[#3E3AFF]/80 px-6 text-white w-full min-[477px]:w-auto">
+                    Повторная
+                    бронь
+                  </button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+
+      <h2 class="text-[30px] font-semibold ">История бронирований</h2>
+      <div class="flex ">
+        <button
+            class=" flex items-center justify-center  font-normal text-[#3E3AFF] rounded-[32px] bg-[#F0F2FF]  h-8 p-6 border  border-[#3E3AFF]  ">
+          Прошлые
+        </button>
+        <button class="flex items-center justify-center  font-normal  rounded-[32px]   h-8 p-6 ">Отмененые</button>
+      </div>
+      <!-- Card: Данные владельца профиля -->
+      <section class="rounded-2xl border border-indigo-200/60 bg-white p-4 md:p-6">
+        <div class="">
+          <!-- Left column -->
+          <div class="space-y-5 w-full ">
+            <div class="flex justify-between items-start w-full gap-6 flex-col md:flex-row">
+              <img src="images/image 82.png" alt="" class="rounded-[12px] w-full sm:w-auto">
+              <div class="w-full ">
+                <div class="flex-jsb-c gap-4">
+                  <div class="flex items-center justify-center  h-[32px] bg-[#F0F2FF]  rounded-[32px] gap-2 px-4  ">
+                    <i class="fa-solid fa-calendar-check text-[#71717A] text-[13px]  "></i>
+                    <span class="text-[#71717A] text-[13px]  ">Завершено</span>
+                  </div>
+
+                  <div class=" flex justify-center items-center  ">
+                    <p class="text-[16px] font-semibold  ">USZ 9 000 000 000 </p>
+                    <i class="fa-solid fa-ellipsis-vertical text-[#3E3AFF]  ml-6 "></i>
+                  </div>
+                </div>
+
+
+                <div class=" flex justify-start items-center gap-2  pt-3 ">
+                  <p class="text-[16px] font-semibold  ">Bukhara Baraka </p>
+                  <div class=" min-w-[2px] h-[16px] bg-[#71717A] "></div>
+                  <p class="text-[12px] font-normal text-[#27272A]  ">Бухара</p>
+                </div>
+                <div class=" flex justify-start items-center  ">
+                  <p class="text-[12px] font-bold py-3 "><span class="text-[#71717A]">Заезд</span> пн 12 мая 2025
+                    <span class="px-[4px] text-[#71717A] ">|</span> <span class="text-[#71717A]">Отъезд</span> вт 27
+                    мая 2025</p>
+                </div>
+                <div class="flex justify-start items-center gap-2 flex-col min-[477px]:flex-row">
+                  <button
+                      class="h-[48px] gap-2  text-[15px] justify-center items-center flex rounded-xl bg-[#CDD3FF] px-6 text-[#010078] w-full min-[477px]:w-auto">
+                    Сведения
+                    о бронировании
+                  </button>
+                  <button
+                      class="h-[48px] gap-2  text-[15px] justify-center items-center flex rounded-xl bg-[#3E3AFF] hover:bg-[#3E3AFF]/80 px-6 text-white w-full min-[477px]:w-auto">
+                    Повторная
+                    бронь
+                  </button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <section class="rounded-2xl border border-indigo-200/60 bg-white p-4 md:p-6">
+        <div class="">
+          <!-- Left column -->
+          <div class="space-y-5 w-full ">
+            <div class="flex justify-between items-start w-full gap-6 flex-col md:flex-row">
+              <img src="images/image 82-1.png" alt="" class="rounded-[12px] w-full sm:w-auto">
+              <div class="w-full ">
+                <div class="flex-jsb-c gap-4">
+                  <div class="flex items-center justify-center  h-[32px] bg-[#F0F2FF]  rounded-[32px] gap-2 px-4  ">
+                    <i class="fa-solid fa-calendar-check text-[#71717A] text-[13px]  "></i>
+                    <span class="text-[#71717A] text-[13px]  ">Завершено</span>
+                  </div>
+
+                  <div class=" flex justify-center items-center  ">
+                    <p class="text-[16px] font-semibold  ">USZ 9 000 000 000 </p>
+                    <i class="fa-solid fa-ellipsis-vertical text-[#3E3AFF]  ml-6 "></i>
+                  </div>
+                </div>
+
+
+                <div class=" flex justify-start items-center gap-2  pt-3 ">
+                  <p class="text-[16px] font-semibold  ">Гостиница FAYZ </p>
+                  <div class=" min-w-[2px] h-[16px] bg-[#71717A] "></div>
+                  <p class="text-[12px] font-normal text-[#27272A]  ">Ташкент</p>
+                </div>
+                <div class=" flex justify-start items-center  ">
+                  <p class="text-[12px] font-bold py-3 "><span class="text-[#71717A]">Заезд</span> чт 10 апр 2025
+                    <span class="px-[4px] text-[#71717A] ">|</span> <span class="text-[#71717A]">Отъезд</span> сб 12 апр
+                    2025</p>
+                </div>
+                <div class="flex justify-start items-center gap-2 flex-col min-[477px]:flex-row">
+                  <button
+                      class="h-[48px] gap-2  text-[15px] justify-center items-center flex rounded-xl bg-[#CDD3FF] px-6 text-[#010078] w-full min-[477px]:w-auto">
+                    Сведения
+                    о бронировании
+                  </button>
+                  <button
+                      class="h-[48px] gap-2  text-[15px] justify-center items-center flex rounded-xl bg-[#3E3AFF] hover:bg-[#3E3AFF]/80 px-6 text-white w-full min-[477px]:w-auto">
+                    Повторная
+                    бронь
+                  </button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </section>
+
+    </div>
+  </div>
+
+
+</div>
+
+<section
+    class="contact-section w-full md:h-[480px] mt-[-100px] pt-[130px] md:pt-[110px] rounded-[32px] pb-12 bg-white">
+  <div class="container h-full">
+    <div class="w-full flex-jsb-c h-full gap-6 flex-col md:flex-row">
+      <div class="w-full flex-js-c gap-6">
+        <h4 class="md:text-[20px] md:font-bold text-[#27272A] w-full md:w-[161px] md:mb-[22px] order-2 md:order-1">Ваш
+          агент всегда на связи</h4>
+        <a href="#" class="order-1 md:order-2">
+          <img src="images/icons/tg.svg" alt="tg" width="105" height="105"
+               class="w-[42px] md:w-[105px] h-[42px] md:h-[105px]">
+        </a>
+      </div>
+      <div class="w-full">
+        <h4 class="md:text-[20px] font-bold text-[#27272A] mb-[22px]">Укажите удобное время для звонка </h4>
+        <div class="w-full flex-jsb-c gap-3 flex-col md:flex-row">
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+            <img src="images/icons/user.svg" alt="icon user" width="20" height="20">
+            <input type="text" placeholder="Имя" class="placeholder:text-[#71717A] w-full">
+          </label>
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+            <img src="images/icons/call.svg" alt="" width="20" height="20">
+            <input type="text" placeholder="Номер телефона" class="placeholder:text-[#71717A] w-full">
+          </label>
+          <label
+              class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-jsb-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px] cursor-pointer">
+            <span>СР, 12:15 </span>
+            <img src="images/icons/suffix-time.svg" alt="suffix-time" width="20" height="20">
+          </label>
+        </div>
+        <div class="mt-6 w-full">
+          <button class="w-full md:w-[287px] h-12 rounded-[12px] bg-[#00D9FF] hover:bg-[#00D9F3] text-[#0D607D]">
+            Отправить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="w-full bg-[#0E00D6] mt-[-50px] z-[-100] relative">
+  <div class="container pt-[100px] block min-[1138px]:hidden">
+    <div class="flex-jc-c">
+      <a href="#">
+        <img src="images/icons/footer-logo.svg" alt="logo">
+      </a>
+    </div>
+    <div class="flex-jsb-s gap-4 mt-6">
+      <div class="flex-js-s gap-6 flex-col">
+        <a href="#" class="text-white">О сервисе</a>
+        <a href="#" class="text-white">Обратная связь</a>
+        <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+        <div class="flex-js-e gap-2">
+          <span class="text-white text-[40px]">007</span>
+          <span class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для <br> абонентов Билайн и
+              OQ</span>
+        </div>
+      </div>
+      <div class="flex-js-c gap-8 flex-col">
+        <a href="#">
+          <img src="images/icons/fb.svg" alt="fb">
+        </a>
+        <a href="#">
+          <img src="images/icons/insta.svg" alt="insta">
+        </a>
+        <a href="#">
+          <img src="images/icons/Telegram.svg" alt="telegram">
+        </a>
+        <a href="#">
+          <img src="images/icons/youtube.svg" alt="youtube">
+        </a>
+      </div>
+    </div>
+    <div class="flex-jsb-c mt-6">
+      <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+      <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+    </div>
+    <div class="w-full mt-4 h-[1px] bg-white/30"></div>
+    <div class="mt-4 text-center text-[#FFF0E0] pb-6 tracking-[-0.18px] opacity-70">
+      © 2024 Kettik. All rights reserved
+    </div>
+  </div>
+  <div class="container pt-[100px] hidden min-[1138px]:block">
+    <div class="flex-jsb-c">
+      <a href="#">
+        <img src="images/icons/footer-logo.svg" alt="logo">
+      </a>
+      <div class="flex-jsb-c gap-[56px]">
+        <a href="#" class="text-white">О сервисе</a>
+        <a href="#" class="text-white">Обратная связь</a>
+        <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+      </div>
+      <div class="flex-js-e gap-2">
+        <span class="text-white text-[40px]">007</span>
+        <span class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для абонентов Билайн и OQ</span>
+      </div>
+    </div>
+  </div>
+  <div class="w-full mt-12 h-[1px] bg-white/30 hidden min-[1138px]:block"></div>
+  <div class="container py-8 hidden min-[1138px]:block">
+    <div class="flex-jsb-c">
+      <span class="text-[13px] text-[#FFF0E0] opacity-70">© 2024 Kettik. All rights reserved</span>
+      <div class="flex-jc-c gap-8">
+        <a href="#">
+          <img src="images/icons/fb.svg" alt="fb">
+        </a>
+        <a href="#">
+          <img src="images/icons/insta.svg" alt="insta">
+        </a>
+        <a href="#">
+          <img src="images/icons/Telegram.svg" alt="telegram">
+        </a>
+        <a href="#">
+          <img src="images/icons/youtube.svg" alt="youtube">
+        </a>
+      </div>
+      <div class="flex-je-c gap-[40px]">
+        <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+        <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div
+    class="fixed top-0 left-0 w-full h-[100dvh] backdrop-blur-[4px] z-10 flex-jc-s pt-[100px] px-6 pb-6 hidden [&.active]:flex active">
+  <div class="max-w-[860px] w-full bg-white border rounded-[16px] border-[#1201FF33] relative p-1">
+    <button
+        class="w-8 h-8 rounded-[12px] flex-jc-c border border-purple absolute top-[-10px] right-[-10px] bg-white z-10"
+        id="close-modal-hotel">
+      <i class="icon-close text-[23px] text-black/70"></i>
+    </button>
+
+    <div class="w-full mx-auto bg-white rounded-lg overflow-hidden">
+      <div class="flex items-start p-6">
+        <div class="flex-shrink-0 mr-4">
+          <img src="images/search-result/hotel-2.png" alt="Hotel Kukaldosh" class="w-20 h-20 rounded-lg object-cover">
+        </div>
+        <div class="flex-1">
+          <h2 class="text-xl font-semibold text-gray-900 mb-1">Бутик-отель Kukaldosh</h2>
+          <p class="text-sm text-gray-600 mb-2">ул. М. Амбар 115, Бухара</p>
+          <p class="text-sm text-gray-600 mb-2">Номер брони: <span class="font-medium">30987514</span></p>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.666992C4.36819 0.666992 4.66667 0.965469 4.66667 1.33366V2.00033H8.66667V1.33366C8.66667 0.965469 8.96515 0.666992 9.33333 0.666992C9.70153 0.666992 10 0.965469 10 1.33366V2.00141C10.317 2.00359 10.594 2.01014 10.8346 2.02979C11.2093 2.0604 11.5538 2.12611 11.8773 2.29097C12.3791 2.54664 12.787 2.95459 13.0427 3.45635C13.2075 3.77991 13.2733 4.12438 13.3039 4.49911C13.3334 4.8599 13.3333 5.3028 13.3333 5.83944L13.3333 11.4945C13.3333 12.0312 13.3334 12.4741 13.3039 12.8349C13.2733 13.2096 13.2075 13.5541 13.0427 13.8776C12.787 14.3794 12.3791 14.7873 11.8773 15.043C11.5538 15.2079 11.2093 15.2736 10.8346 15.3042C10.4738 15.3337 10.0309 15.3337 9.49422 15.3337L3.83912 15.3337C3.30248 15.3337 2.85958 15.3337 2.49878 15.3042C2.12405 15.2736 1.77958 15.2079 1.45603 15.043C0.95426 14.7873 0.546312 14.3794 0.29065 13.8776C0.125789 13.5541 0.0600798 13.2096 0.029463 12.8349C-1.52091e-05 12.4741 -8.21607e-06 12.0312 2.87528e-07 11.4945L2.87528e-07 5.83946C-8.21607e-06 5.30281 -1.52091e-05 4.8599 0.029463 4.49911C0.0600798 4.12438 0.125789 3.77991 0.29065 3.45635C0.546312 2.95459 0.95426 2.54664 1.45603 2.29097C1.77958 2.12611 2.12405 2.0604 2.49878 2.02979C2.73932 2.01014 3.01636 2.00359 3.33333 2.00141V1.33366C3.33333 0.965469 3.63181 0.666992 4 0.666992ZM3.33333 3.33483C3.03632 3.33692 2.80309 3.3427 2.60736 3.35869C2.31508 3.38257 2.16561 3.42586 2.06135 3.47898C1.81046 3.60681 1.60649 3.81079 1.47866 4.06167C1.42553 4.16594 1.38225 4.31541 1.35837 4.60768C1.33385 4.90774 1.33333 5.29594 1.33333 5.86699V6.00033L12 6.00033V5.86699C12 5.29594 11.9995 4.90774 11.975 4.60768C11.9511 4.31541 11.9078 4.16594 11.8547 4.06167C11.7268 3.81079 11.5229 3.60681 11.272 3.47898C11.1677 3.42586 11.0183 3.38257 10.726 3.35869C10.5302 3.3427 10.297 3.33692 10 3.33483V4.00033C10 4.36852 9.70153 4.66699 9.33333 4.66699C8.96515 4.66699 8.66667 4.36852 8.66667 4.00033V3.33366L4.66667 3.33366V4.00033C4.66667 4.36852 4.36819 4.66699 4 4.66699C3.63181 4.66699 3.33333 4.36852 3.33333 4.00033V3.33483ZM12 7.33366L1.33333 7.33366L1.33333 11.467C1.33333 12.038 1.33385 12.4262 1.35837 12.7263C1.38225 13.0186 1.42553 13.168 1.47866 13.2723C1.60649 13.5232 1.81046 13.7272 2.06135 13.855C2.16561 13.9081 2.31508 13.9514 2.60736 13.9753C2.90742 13.9998 3.29561 14.0003 3.86667 14.0003L9.46667 14.0003C10.0377 14.0003 10.4259 13.9998 10.726 13.9753C11.0183 13.9514 11.1677 13.9081 11.272 13.855C11.5229 13.7272 11.7268 13.5232 11.8547 13.2723C11.9078 13.168 11.9511 13.0186 11.975 12.7263C11.9995 12.4262 12 12.038 12 11.467L12 7.33366Z" fill="#3E3AFF"/>
+            </svg>
+
+            10 авг — 12 авг 2025
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 border rounded-[12px] mx-4 pr-2">
+        <div class="h-[400px] overflow-y-auto pr-2">
+          <h3 class="text-lg font-medium text-gray-900 mb-6">Оцените проживание в отеле</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Left Column -->
+            <div class="space-y-6">
+              <!-- Staff Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium text-gray-700">Персонал</span>
+                  <span class="text-sm font-medium text-gray-900">10,0</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <!-- Amenities Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium text-gray-700">Удобства</span>
+                  <span class="text-sm font-medium text-gray-900">10,0</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <!-- Cleanliness Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium text-gray-700">Чистота</span>
+                  <span class="text-sm font-medium text-gray-900">10,0</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <!-- Comfort Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium text-gray-700">Комфорт</span>
+                  <span class="text-sm font-medium text-gray-900">10,0</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-6">
+              <!-- Price/Quality Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium text-gray-700">Цена/качество</span>
+                  <span class="text-sm font-medium text-gray-900">10,0</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <!-- Location Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium text-gray-700">Месторасположение</span>
+                  <span class="text-sm font-medium text-gray-900">10,0</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <!-- WiFi Rating -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium text-gray-700">Бесплатный Wi-Fi</span>
+                  <span class="text-sm font-medium text-gray-900">10,0</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Positive Feedback -->
+          <div class="mt-8">
+            <h4 class="text-base font-medium text-gray-900 mb-3">Расскажите новым гостям, что было хорошего в отеле</h4>
+            <div class="relative">
+              <div class="absolute left-3 top-3">
+                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+              <textarea
+                  class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-none"
+                  rows="4"
+                  placeholder="Напишите свой отзыв">
+                    </textarea>
+            </div>
+          </div>
+
+          <!-- Negative Feedback -->
+          <div class="mt-6">
+            <h4 class="text-base font-medium text-gray-900 mb-3">Расскажите новым гостям, что было негативного в отеле</h4>
+            <div class="relative">
+              <div class="absolute left-3 top-3">
+                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+              <textarea
+                  class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-none"
+                  rows="4"
+                  placeholder="Напишите свой отзыв">
+                    </textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button and Disclaimer -->
+          <div class="mt-8">
+            <button class="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors">
+              Добавить отзыв
+            </button>
+            <p class="mt-3 text-xs text-gray-500">
+              Вы можете изменить отзыв до публикации, пока он будет на модерации, это займет 1-3 дня.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const ratingBars = document.querySelectorAll('.w-full.bg-gray-200');
+
+    ratingBars.forEach(bar => {
+      bar.addEventListener('click', function(e) {
+        const rect = this.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const percentage = (clickX / rect.width) * 100;
+        const rating = Math.round((percentage / 100) * 10 * 10) / 10;
+
+        const progressBar = this.querySelector('div');
+        const ratingDisplay = this.parentElement.querySelector('.text-sm.font-medium.text-gray-900');
+
+        progressBar.style.width = percentage + '%';
+        ratingDisplay.textContent = rating.toFixed(1).replace('.', ',');
+      });
+    });
+  });
+</script>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

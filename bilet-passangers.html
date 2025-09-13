@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="fonts/style.css">
+
+  <link rel="stylesheet" href="css/output.css">
+
+  <script src="js/aos.js"></script>
+  <script src="js/nouislider.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <title>Kettik Hotel</title>
+</head>
+<body>
+
+
+  <nav class="w-full h-[56px] md:h-[82px] bg-[#0E00D6] flex-jc-c">
+    <div class="container flex-jsb-c">
+      <a href="/">
+        <img src="images/home/logo.svg" alt="Logo" class="hidden md:block">
+        <img src="images/home/logo-mobile.svg" alt="Logo" class="block md:hidden">
+      </a>
+
+
+      <div class="flex-je-c gap-4 hidden md:flex">
+        <button class="text-white flex-jc-c gap-2">
+          Авиабилеты
+          <i class="icon icon-arrow_drop_down text-white"></i>
+        </button>
+        <button class="text-white flex-jc-c gap-2">
+          RU
+          <i class="icon icon-arrow_drop_down text-white"></i>
+        </button>
+        <div class="min-w-[1px] h-[16px] bg-[#FFF0E0]"></div>
+        <button class="text-white flex-jc-c gap-2">
+          UZS
+          <i class="icon icon-arrow_drop_down text-white"></i>
+        </button>
+        <button class="text-white flex-jc-c gap-2 border border-[#FFF0E0] rounded-full px-[18px] py-[8px]">
+          Войти в аккаунт
+        </button>
+
+      </div>
+
+      <div class="mobile-menu-board flex md:hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="mx-auto max-w-[1200px] py-8 mb-[100px]">
+    <h1 class="text-[40px] leading-none sm:text-5xl mb-8">Авиабилеты: пассажиры</h1>
+
+    <div class="grid gap-6 lg:grid-cols-[280px_1fr]">
+      <aside class="rounded-2xl border border-[#3E3AFF]/30 bg-white p-2">
+        <div class="flex flex-col">
+          <div class="rounded-xl overflow-hidden border border-transparent">
+            <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 mb-1 ">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.22 2H11.78C11.2496 2 10.7409 2.21071 10.3658 2.58579C9.99072 2.96086 9.78 3.46957 9.78 4V4.18C9.77964 4.53073 9.68706 4.87519 9.51154 5.17884C9.33602 5.48248 9.08374 5.73464 8.78 5.91L8.35 6.16C8.04596 6.33554 7.70108 6.42795 7.35 6.42795C6.99893 6.42795 6.65404 6.33554 6.35 6.16L6.2 6.08C5.74107 5.81526 5.19584 5.74344 4.684 5.88031C4.17217 6.01717 3.73555 6.35154 3.47 6.81L3.25 7.19C2.98526 7.64893 2.91345 8.19416 3.05031 8.706C3.18717 9.21783 3.52154 9.65445 3.98 9.92L4.13 10.02C4.43228 10.1945 4.68362 10.4451 4.85905 10.7468C5.03448 11.0486 5.1279 11.391 5.13 11.74V12.25C5.1314 12.6024 5.03965 12.949 4.86405 13.2545C4.68844 13.5601 4.43521 13.8138 4.13 13.99L3.98 14.08C3.52154 14.3456 3.18717 14.7822 3.05031 15.294C2.91345 15.8058 2.98526 16.3511 3.25 16.81L3.47 17.19C3.73555 17.6485 4.17217 17.9828 4.684 18.1197C5.19584 18.2566 5.74107 18.1847 6.2 17.92L6.35 17.84C6.65404 17.6645 6.99893 17.5721 7.35 17.5721C7.70108 17.5721 8.04596 17.6645 8.35 17.84L8.78 18.09C9.08374 18.2654 9.33602 18.5175 9.51154 18.8212C9.68706 19.1248 9.77964 19.4693 9.78 19.82V20C9.78 20.5304 9.99072 21.0391 10.3658 21.4142C10.7409 21.7893 11.2496 22 11.78 22H12.22C12.7504 22 13.2591 21.7893 13.6342 21.4142C14.0093 21.0391 14.22 20.5304 14.22 20V19.82C14.2204 19.4693 14.3129 19.1248 14.4885 18.8212C14.664 18.5175 14.9163 18.2654 15.22 18.09L15.65 17.84C15.954 17.6645 16.2989 17.5721 16.65 17.5721C17.0011 17.5721 17.346 17.6645 17.65 17.84L17.8 17.92C18.2589 18.1847 18.8042 18.2566 19.316 18.1197C19.8278 17.9828 20.2645 17.6485 20.53 17.19L20.75 16.8C21.0147 16.3411 21.0866 15.7958 20.9497 15.284C20.8128 14.7722 20.4785 14.3356 20.02 14.07L19.87 13.99C19.5648 13.8138 19.3116 13.5601 19.136 13.2545C18.9604 12.949 18.8686 12.6024 18.87 12.25V11.75C18.8686 11.3976 18.9604 11.051 19.136 10.7455C19.3116 10.4399 19.5648 10.1862 19.87 10.01L20.02 9.92C20.4785 9.65445 20.8128 9.21783 20.9497 8.706C21.0866 8.19416 21.0147 7.64893 20.75 7.19L20.53 6.81C20.2645 6.35154 19.8278 6.01717 19.316 5.88031C18.8042 5.74344 18.2589 5.81526 17.8 6.08L17.65 6.16C17.346 6.33554 17.0011 6.42795 16.65 6.42795C16.2989 6.42795 15.954 6.33554 15.65 6.16L15.22 5.91C14.9163 5.73464 14.664 5.48248 14.4885 5.17884C14.3129 4.87519 14.2204 4.53073 14.22 4.18V4C14.22 3.46957 14.0093 2.96086 13.6342 2.58579C13.2591 2.21071 12.7504 2 12.22 2Z" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              <span class="text-sm font-medium">Настройки профиля</span>
+            </a>
+
+            <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl">
+              <div class="flex items-center gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3_32)">
+                    <path d="M16 10H20C20.5304 10 21.0391 10.2107 21.4142 10.5858C21.7893 10.9609 22 11.4696 22 12C22 12.5304 21.7893 13.0391 21.4142 13.4142C21.0391 13.7893 20.5304 14 20 14H16L12 21H9L11 14H7L5 16H2L4 12L2 8H5L7 10H11L9 3H12L16 10Z" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_3_32">
+                      <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                Авиабилеты
+              </div>
+            </a>
+            <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px] bg-indigo-50">Заказы</a>
+            <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Пассажиры</a>
+          </div>
+
+          <div class="my-4 h-px bg-gray-200"></div>
+
+          <!-- Group 2 -->
+          <div class="rounded-xl overflow-hidden border border-transparent">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 rounded-xl">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2Z" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 16L9.348 15.76C10.813 14.747 13.188 14.747 14.652 15.76L15 16" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 7H8.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 7H16.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 7H12.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 11H12.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 11H16.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 11H8.01" stroke="#3E3AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 22V15.5M14 15.5V22" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Отели
+            </a>
+            <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Бронирования</a>
+            <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Избранное</a>
+            <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Отзывы</a>
+            <a href="#" class="flex items-center justify-between px-4 py-3 text-sm hover:bg-gray-50 rounded-xl pl-[52px]">Сообщения</a>
+          </div>
+
+          <div class="my-4 h-px bg-gray-200"></div>
+
+          <a href="#" class="flex items-center gap-3 px-4 py-3 text-sm text-indigo-600 hover:bg-indigo-50 rounded-xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_3_168)">
+                <path d="M18 18C14.6863 21.3137 9.31371 21.3137 6 18C2.68629 14.6863 2.68629 9.31371 6 6C9.31371 2.68629 14.6863 2.68629 18 6" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M12 12L22.1823 12" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M19.6367 15.2598L22.6367 12.2598C22.8024 12.0941 22.8024 11.8255 22.6367 11.6598L19.6367 8.65977" stroke="#3E3AFF" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_168">
+                  <rect width="24" height="24" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+
+            Выйти из аккаунта
+          </a>
+        </div>
+      </aside>
+
+      <div class="space-y-6 pr-4">
+        <section class="rounded-2xl border border-[#3E3AFF]/30 bg-white p-6">
+          <div class="w-full flex-js-s gap-4">
+            <img src="images/new-version/couple-going-to-dhaka.svg" alt="couple-going-to-dhaka">
+            <div>
+              <h2 class="text-[24px] font-semibold mb-1">Данные пассажиров ещё не добавлены</h2>
+              <p>
+                Сохраните информацию один раз — и заполнять билеты станет проще и быстрее.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="mt-4">
+          <button type="submit" class="px-6 py-3 bg-blue text-white rounded-lg hover:bg-blue-700 transition-colors font-medium flex-jc-c gap-2">
+            <img src="images/icons/plus.svg" alt="" class="brightness-[8]"> Сохранить пассажира
+          </button>
+        </div>
+
+
+
+        <section class="mt-10">
+
+          <div class="max-w-4xl mx-auto mb-6">
+            <div class="bg-white rounded-2xl border border-gray-200 p-6">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                  <div class="mr-1">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.74853 1.5C11.6985 1.5 13.1185 3.15 13.1185 5.42C13.1185 7.36 12.7785 8.28 11.7185 9.23C11.3985 9.51 11.2185 9.92 11.2185 10.35V11.05C11.2185 11.65 11.5785 12.19 12.1285 12.43C12.8085 12.72 13.7985 13.1 14.6685 13.44C15.5485 13.78 16.4585 14.13 16.6885 14.25C16.9085 14.39 17.5685 15.37 18.0085 18.27C18.0085 18.29 18.0185 18.34 17.9685 18.39C17.9385 18.42 17.8985 18.45 17.8285 18.45H1.64853C1.58853 18.45 1.54853 18.42 1.52853 18.4C1.48853 18.35 1.49853 18.31 1.49853 18.3C1.93853 15.38 2.59853 14.39 2.81853 14.25C3.04853 14.13 3.99853 13.76 4.83853 13.44C5.70853 13.1 6.69853 12.72 7.37853 12.43C7.92853 12.19 8.28853 11.65 8.28853 11.05V10.35C8.28853 9.92 8.10853 9.51 7.78853 9.23C6.72853 8.29 6.38853 7.36 6.38853 5.42C6.38853 3.15 7.80853 1.51 9.75853 1.5M9.74853 0C6.96853 0 4.87853 2.33 4.87853 5.42C4.87853 7.46 5.19853 8.94 6.78853 10.35V11.05C6.13853 11.33 5.17853 11.7 4.30853 12.04C3.14853 12.49 2.41853 12.77 2.11853 12.93C0.89853 13.58 0.29853 16.23 0.0185301 18.08C-0.13147 19.07 0.64853 19.96 1.65853 19.96H17.8285C18.8485 19.96 19.6385 19.06 19.4885 18.05C19.2085 16.2 18.6085 13.57 17.3985 12.93C17.0985 12.77 16.3685 12.49 15.2085 12.04C14.3385 11.71 13.3785 11.33 12.7285 11.05V10.35C14.3185 8.94 14.6385 7.46 14.6385 5.42C14.6385 2.34 12.5485 0.01 9.76853 0H9.74853Z" fill="#3E3AFF"/>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <div class="text-[12px] mb-1 bg-[#FFF0E0] rounded-[4px] flex-jc-c">Владелец учетной записи</div>
+                    <div class="text-lg font-semibold text-blue mb-1">ARTEM ARHANGELSKY</div>
+                    <div class="text-sm text-[#71717A]">27/06/1998</div>
+                  </div>
+                </div>
+
+                <div>
+                  <button class="text-blue hover:text-blue/80 font-medium text-sm transition-colors">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-4xl mx-auto mb-6">
+            <div class="bg-white rounded-2xl border border-gray-200 p-6">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                  <div class="mr-1">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.74853 1.5C11.6985 1.5 13.1185 3.15 13.1185 5.42C13.1185 7.36 12.7785 8.28 11.7185 9.23C11.3985 9.51 11.2185 9.92 11.2185 10.35V11.05C11.2185 11.65 11.5785 12.19 12.1285 12.43C12.8085 12.72 13.7985 13.1 14.6685 13.44C15.5485 13.78 16.4585 14.13 16.6885 14.25C16.9085 14.39 17.5685 15.37 18.0085 18.27C18.0085 18.29 18.0185 18.34 17.9685 18.39C17.9385 18.42 17.8985 18.45 17.8285 18.45H1.64853C1.58853 18.45 1.54853 18.42 1.52853 18.4C1.48853 18.35 1.49853 18.31 1.49853 18.3C1.93853 15.38 2.59853 14.39 2.81853 14.25C3.04853 14.13 3.99853 13.76 4.83853 13.44C5.70853 13.1 6.69853 12.72 7.37853 12.43C7.92853 12.19 8.28853 11.65 8.28853 11.05V10.35C8.28853 9.92 8.10853 9.51 7.78853 9.23C6.72853 8.29 6.38853 7.36 6.38853 5.42C6.38853 3.15 7.80853 1.51 9.75853 1.5M9.74853 0C6.96853 0 4.87853 2.33 4.87853 5.42C4.87853 7.46 5.19853 8.94 6.78853 10.35V11.05C6.13853 11.33 5.17853 11.7 4.30853 12.04C3.14853 12.49 2.41853 12.77 2.11853 12.93C0.89853 13.58 0.29853 16.23 0.0185301 18.08C-0.13147 19.07 0.64853 19.96 1.65853 19.96H17.8285C18.8485 19.96 19.6385 19.06 19.4885 18.05C19.2085 16.2 18.6085 13.57 17.3985 12.93C17.0985 12.77 16.3685 12.49 15.2085 12.04C14.3385 11.71 13.3785 11.33 12.7285 11.05V10.35C14.3185 8.94 14.6385 7.46 14.6385 5.42C14.6385 2.34 12.5485 0.01 9.76853 0H9.74853Z" fill="#3E3AFF"/>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <div class="text-lg font-semibold text-blue mb-1">GALINA PETROVA VIKTOROVNA</div>
+                    <div class="text-sm text-[#71717A]">27/06/1998</div>
+                  </div>
+                </div>
+
+                <div>
+                  <button class="text-blue hover:text-blue/80 font-medium text-sm transition-colors">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <section
+      class="contact-section w-full md:h-[480px] mt-[-100px] pt-[130px] md:pt-[110px] rounded-[32px] pb-12 bg-white">
+    <div class="container h-full">
+      <div class="w-full flex-jsb-c h-full gap-6 flex-col md:flex-row">
+        <div class="w-full flex-js-c gap-6">
+          <h4 class="md:text-[20px] md:font-bold text-[#27272A] w-full md:w-[161px] md:mb-[22px] order-2 md:order-1">
+            Ваш агент всегда на связи
+          </h4>
+          <a href="#" class="order-1 md:order-2">
+            <img src="images/icons/tg.svg" alt="tg" width="105" height="105"
+                 class="w-[42px] md:w-[105px] h-[42px] md:h-[105px]">
+          </a>
+        </div>
+        <div class="w-full">
+          <h4 class="md:text-[20px] font-bold text-[#27272A] mb-[22px]">Укажите удобное время для звонка </h4>
+          <div class="w-full flex-jsb-c gap-3 flex-col md:flex-row">
+            <label class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+              <img src="images/icons/user.svg" alt="icon user" width="20" height="20">
+              <input type="text" placeholder="Имя" class="placeholder:text-[#71717A] w-full">
+            </label>
+            <label class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-js-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px]">
+              <img src="images/icons/call.svg" alt="" width="20" height="20">
+              <input type="text" placeholder="Номер телефона" class="placeholder:text-[#71717A] w-full">
+            </label>
+            <label class="w-full overflow-hidden bg-white rounded-[12px] px-4 h-12 flex-jsb-c gap-2 min-w-[150px] min-[874px]:min-w-[200px] min-[1131px]:min-w-[286px] cursor-pointer">
+              <span>СР, 12:15 </span>
+              <img src="images/icons/suffix-time.svg" alt="suffix-time" width="20" height="20">
+            </label>
+          </div>
+          <div class="mt-6 w-full">
+            <button class="w-full md:w-[287px] h-12 rounded-[12px] bg-[#00D9FF] hover:bg-[#00D9F3] text-[#0D607D]">
+              Отправить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full bg-[#0E00D6] mt-[-50px] z-[-100] relative">
+    <div class="container pt-[100px] block min-[1138px]:hidden">
+      <div class="flex-jc-c">
+        <a href="#">
+          <img src="images/icons/footer-logo.svg" alt="logo">
+        </a>
+      </div>
+      <div class="flex-jsb-s gap-4 mt-6">
+        <div class="flex-js-s gap-6 flex-col">
+          <a href="#" class="text-white">О сервисе</a>
+          <a href="#" class="text-white">Обратная связь</a>
+          <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+          <div class="flex-js-e gap-2">
+            <span class="text-white text-[40px]">007</span>
+            <span
+                class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для <br> абонентов Билайн и OQ</span>
+          </div>
+        </div>
+        <div class="flex-js-c gap-8 flex-col">
+          <a href="#">
+            <img src="images/icons/fb.svg" alt="fb">
+          </a>
+          <a href="#">
+            <img src="images/icons/insta.svg" alt="insta">
+          </a>
+          <a href="#">
+            <img src="images/icons/Telegram.svg" alt="telegram">
+          </a>
+          <a href="#">
+            <img src="images/icons/youtube.svg" alt="youtube">
+          </a>
+        </div>
+      </div>
+      <div class="flex-jsb-c mt-6">
+        <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+        <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+      </div>
+      <div class="w-full mt-4 h-[1px] bg-white/30"></div>
+      <div class="mt-4 text-center text-[#FFF0E0] pb-6 tracking-[-0.18px] opacity-70">
+        © 2024 Kettik. All rights reserved
+      </div>
+    </div>
+    <div class="container pt-[100px] hidden min-[1138px]:block">
+      <div class="flex-jsb-c">
+        <a href="#">
+          <img src="images/icons/footer-logo.svg" alt="logo">
+        </a>
+        <div class="flex-jsb-c gap-[56px]">
+          <a href="#" class="text-white">О сервисе</a>
+          <a href="#" class="text-white">Обратная связь</a>
+          <a href="#" class="text-white font-bold">+998 20 007 007 0</a>
+        </div>
+        <div class="flex-js-e gap-2">
+          <span class="text-white text-[40px]">007</span>
+          <span class="text-[13px] text-[#FFF0E0] mb-[10px] block">Короткий номер для абонентов Билайн и OQ</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-full mt-12 h-[1px] bg-white/30 hidden min-[1138px]:block"></div>
+    <div class="container py-8 hidden min-[1138px]:block">
+      <div class="flex-jsb-c">
+        <span class="text-[13px] text-[#FFF0E0] opacity-70">© 2024 Kettik. All rights reserved</span>
+        <div class="flex-jc-c gap-8">
+          <a href="#">
+            <img src="images/icons/fb.svg" alt="fb">
+          </a>
+          <a href="#">
+            <img src="images/icons/insta.svg" alt="insta">
+          </a>
+          <a href="#">
+            <img src="images/icons/Telegram.svg" alt="telegram">
+          </a>
+          <a href="#">
+            <img src="images/icons/youtube.svg" alt="youtube">
+          </a>
+        </div>
+        <div class="flex-je-c gap-[40px]">
+          <a href="#" class="text-[#FFF0E0] opacity-70">Политика конфеденциальностие</a>
+          <a href="#" class="text-[#FFF0E0] opacity-70">Оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="fixed top-0 left-0 w-full h-[100dvh] backdrop-blur-[4px] z-10 flex-jc-s pt-[100px] px-6 pb-6 hidden [&.active]:flex" id="modal-hotel">
+    <div class="max-w-[860px] w-full bg-white border rounded-[16px] border-[#1201FF33] relative p-1">
+      <button class="w-8 h-8 rounded-[12px] flex-jc-c border border-purple absolute top-[-10px] right-[-10px] bg-white z-10" id="close-modal-hotel">
+        <i class="icon-close text-[23px] text-black/70"></i>
+      </button>
+
+      <div class="w-full p-4">
+
+        <div>
+          <h3 class="text-[24px] font-bold">
+            Двухместный номер с 2 отдельными кроватями и балконом
+          </h3>
+        </div>
+
+        <div class="w-full border-b pb-3 flex-jsb-c gap-4 mt-6">
+          <div class="w-[50%]">
+            <div class="swiper swiper-modal relative w-full overflow-hidden rounded-[12px]">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/order-page/hotesl.png" alt="hotel" class="w-full object-cover h-[350px]">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/order-page/hotel-2.png" alt="hotel" class="w-full object-cover h-[350px]">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/order-page/hotel-3.png" alt="hotel" class="w-full object-cover h-[350px]">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/order-page/hotel-4.png" alt="hotel" class="w-full object-cover h-[350px]">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/order-page/hotel-5.png" alt="hotel" class="w-full object-cover h-[350px]">
+                </div>
+              </div>
+
+              <div class="swiper-button-prev border border-[#1201FF33]" id="modal-slider-prev"></div>
+              <div class="swiper-button-next border border-[#1201FF33]" id="modal-slider-next"></div>
+
+            </div>
+            <div class="swiper swiper-modal-thumbs relative w-full overflow-hidden mt-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                  <img src="images/order-page/hotesl.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+                </div>
+                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                  <img src="images/order-page/hotel-2.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+                </div>
+                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                  <img src="images/order-page/hotel-3.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+                </div>
+                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                  <img src="images/order-page/hotel-4.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+                </div>
+                <div class="swiper-slide blur-[2px] [&.swiper-slide-thumb-active]:blur-none transition border-[2px] border-transparent [&.swiper-slide-thumb-active]:border-[#3E3AFF] rounded-[9px] cursor-pointer transform hover:scale-[0.95]">
+                  <img src="images/order-page/hotel-5.png" alt="hotel" class="w-full h-[64px] object-cover rounded-[9px]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-[50%] relative">
+            <div class="w-full relative">
+              <div class="flex-js-c gap-2 w-full overflow-x-auto scroll-bottom-none">
+                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                  <img src="images/icons/Wii-Fi.svg" alt="Wii-Fi" width="24" height="25">
+                  Wi-fi
+                </button>
+                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                  <img src="images/icons/Restaurant.svg" alt="Restaurant" width="24" height="25">
+                  Ресторан
+                </button>
+                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                  <img src="images/icons/Lift.svg" alt="Lift" width="24" height="25">
+                  Лифт
+                </button>
+                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                  <img src="images/icons/Double-Bed.svg" alt="Double-Bed" width="24" height="25">
+                  Семейные номера
+                </button>
+                <button class="text-nowrap border border-[#E4E7FF] transition hover:border-[#3E3AFF] rounded-[9px] bg-white flex-jc-c gap-3 text-[15px] px-6 py-2">
+                  <img src="images/icons/outline.svg" alt="outline" width="24" height="25">
+                  Уличная парковка
+                </button>
+              </div>
+              <div class="absolute top-0 right-0 w-8 h-full z-10 bg-gradient-to-r from-transparent to-white"></div>
+            </div>
+
+            <div class="w-[95%] h-[360px] overflow-y-auto overflow-x-hidden mt-4">
+              <div class="flex gap-2 text-[15px]">
+                <h3 class="font-bold text-[16px]">Площадь комнаты:</h3>
+                45м2
+              </div>
+              <p class="text-[15px] mt-4">
+                Двухместный номер с 1 кроватью и собственной ванной комнатой с безбарьерным душем, феном и бесплатными туалетно-косметическими принадлежностями. Из этого двухместного номера открывается вид на город. В распоряжении гостей 1 кровать.
+              </p>
+              <h3 class="font-bold mt-4">Ванная комната:</h3>
+
+              <ul class="list-disc ">
+                <li>Душевая кабина</li>
+                <li>Тапочки</li>
+                <li>Бесплатные туалетные принадлежности</li>
+                <li>Туалет</li>
+                <li>Полотенца</li>
+                <li>Фен</li>
+                <li>Туалетная бумага</li>
+                <li>Сушилка для рук</li>
+                <li>Зубная щетка</li>
+                <li>Шапочка для душа</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full mt-6 flex-jsb-c">
+          <div>
+            <ul>
+              <li class="flex-js-c gap-2 text-[14px] mb-2">
+                <div class="flex-js-c min-w-[40px]">
+                  <img src="images/icons/user-black.svg" alt="user-black" width="12" height="12">
+                  <img src="images/icons/user-black.svg" alt="user-black" width="12" height="12">
+                </div>
+                Стандартный двухместный номер с 2 отдельными кроватями
+              </li>
+              <li class="flex-js-c gap-2 text-[14px] mb-2">
+                <div class="flex-js-c min-w-[40px]">
+                  <img src="images/icons/green-check-stroke.svg" alt="green-check" width="20">
+                </div>
+                Бронирование возможно без кредитной карты
+              </li>
+              <li class="flex-js-c gap-2 text-[14px] mb-2">
+                <div class="flex-js-c min-w-[40px]">
+                  <img src="images/icons/RAW-2.svg" alt="green-check" width="25">
+                </div>
+                Сказочный <span class="text-[#1D9F18]">завтрак</span> включен в стоимость
+              </li>
+              <li class="flex-js-c gap-2 text-[14px] mb-2">
+                <div class="flex-js-c min-w-[40px]">
+                  <img src="images/icons/green-check-stroke.svg" alt="green-check" width="20">
+                </div>
+                Бесплатная отмена
+              </li>
+              <li class="flex-js-c gap-2 text-[14px] mb-2">
+                <div class="flex-js-c min-w-[40px]">
+                  <div class="flex-js-s">
+                    <img src="images/icons/single-bed-black.svg" alt="single-bed-black" width="20" height="20">
+                    <sup class="text-[#71717A] mt-2">x2</sup>
+                  </div>
+                </div>
+                Две раздельные кровати
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-[40%]">
+            <h4 class="text-[24px] mb-6 font-bold text-center">UZS 104 000 000</h4>
+            <button class="w-full h-12 text-[18px] bg-[#3E3AFF] rounded-[12px] text-white px-6">
+              Забронировать
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
